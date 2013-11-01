@@ -1,0 +1,9 @@
+@media (min-width: 992px) {
+  body {
+    overflow: hidden;
+  }
+
+  .col-md-8 {
+    overflow: auto;
+  }
+}

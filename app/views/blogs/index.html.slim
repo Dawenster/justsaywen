@@ -1,5 +1,34 @@
-.row style="height: 100%;"
-  .col-md-4 style="padding: 0; position: relative; height: 100%"
-    div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-image:url('https://s3-us-west-2.amazonaws.com/justsaywen/david_wen_new_york_city.JPG'); background-position: left; background-size: cover;"
+css:
+  .row {
+    height: 100%;
+  }
+  .col-md-4 {
+    padding: 0;
+    height: 100%;
+  }
+  .info-bar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image:url('https://s3-us-west-2.amazonaws.com/justsaywen/david_wen_new_york_city.JPG');
+    background-position: left;
+    background-size: cover;
+  }
+  .right-content {
+    position: absolute;
+  }
+  .col-md-8 {
+    padding: 0;
+    height: 100%;
+  }
+
+.row
+  .col-md-4
+    .info-bar
   .col-md-8
-    | Something
+    .right-content
+      - 100.times do
+        div
+          | Something
