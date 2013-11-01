@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html style="height: 100%;">
 <head>
-  <title>JustSayWen</title>
+  <title>David Wen | Just Say Wen | 溫上霆</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -18,9 +18,9 @@
   <!-- jQuery UI -->
   <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 </head>
-<body>
-
-<%= yield %>
-
+<body style="height: 100%;">
+  <div class="container" style="margin: 0; height: 100%; width: 100%;">
+    <%= yield %>
+  </div>
 </body>
 </html>
