@@ -9,10 +9,15 @@ javascript:
       e.preventDefault();
       if ($(".nav-menu").hasClass("hidden")) {
         $(".nav-menu").removeClass("hidden");
+        $("body").attr("style", "overflow: hidden;");
         showNavMenu();
       } else {
         hideNavMenu();
+        $("body").attr("style", "");
       }
+    });
+    $(".menu-logo").on('dragstart', function(e) {
+      e.preventDefault();
     });
   });
 

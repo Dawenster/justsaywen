@@ -4,20 +4,12 @@
   .row {
     height: 350px;
   }
-  
-  .info-bar {
-    height: 350px;
-  }
 }
 
 /*Small screens only*/
 
 @media (min-width: 768px) and (max-width: 992px) {
   .row {
-    height: 576px;
-  }
-
-  .info-bar {
     height: 576px;
   }
 }
@@ -35,6 +27,7 @@
 @media (min-width: 992px) {
   body {
     overflow: hidden;
+    height: 100%;
   }
 
   .row {
@@ -42,11 +35,10 @@
   }
 
   .col-md-8 {
-    overflow: auto;
+    height: 100%;
   }
 
   .info-bar {
-    height: 100%;
     background-position: left;
   }
 }

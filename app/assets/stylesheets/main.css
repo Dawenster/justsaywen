@@ -1,7 +1,14 @@
+.container {
+  margin: 0 !important;
+  height: 100% !important;
+  width: 100% !important;
+}
+
 .nav-menu {
   position: fixed;
   width: 280px;
   height: 100%;
+  background-color: #232322;
 }
 
 .menu-logo {
@@ -9,6 +16,7 @@
   top: 10px;
   left: 10px;
   z-index: 100;
+  cursor:pointer;
 }
 
 .col-md-4 {
@@ -18,6 +26,7 @@
 
 .info-bar {
   position: absolute;
+  height: 100%;
   width: 100%;
   top: 0;
   left: 0;
@@ -25,11 +34,8 @@
   background-size: cover;
 }
 
-.right-content {
-  position: absolute;
-}
-
 .col-md-8 {
   padding: 0;
-  height: 100%;
+  overflow: auto;
+  background-color: white;
 }
