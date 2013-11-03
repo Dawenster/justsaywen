@@ -1,0 +1,40 @@
+.nav-menu.hidden
+  - 10.times do
+    div
+      | Nav link
+
+javascript:
+  $(document).ready(function() {
+    $(".menu-logo").click(function(e) {
+      e.preventDefault();
+      if ($(".nav-menu").hasClass("hidden")) {
+        $(".nav-menu").removeClass("hidden");
+        showNavMenu();
+      } else {
+        hideNavMenu();
+      }
+    });
+  });
+
+  var showOptions = {
+    duration: 100
+  }
+
+  var hideOptions = {
+    duration: 100,
+    complete: function () {
+      $(".nav-menu").addClass("hidden");
+    }
+  }
+
+  function showNavMenu() {
+    $(".movable-by-menu").animate({
+      left: "+=280px"
+    }, showOptions);
+  }
+
+  function hideNavMenu() {
+    $(".movable-by-menu").animate({
+      left: "-=280px"
+    }, hideOptions);
+  }
