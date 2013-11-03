@@ -8,21 +8,26 @@ javascript:
     $(".menu-logo").click(function(e) {
       e.preventDefault();
       if ($(".nav-menu").hasClass("hidden")) {
-        $(".nav-menu").removeClass("hidden");
         $("body").attr("style", "overflow: hidden;");
         showNavMenu();
-      } else {
+      }
+    });
+    $(".movable-by-menu").click(function() {
+      if (!$(".nav-menu").hasClass("hidden")) {
         hideNavMenu();
         $("body").attr("style", "");
       }
-    });
+    })
     $(".menu-logo").on('dragstart', function(e) {
       e.preventDefault();
     });
   });
 
   var showOptions = {
-    duration: 100
+    duration: 100,
+    complete: function() {
+      $(".nav-menu").removeClass("hidden");
+    }
   }
 
   var hideOptions = {
