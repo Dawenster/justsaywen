@@ -1,4 +1,4 @@
-.nav-menu.hidden
+.nav-menu.hidden data-status="hidden"
   - 10.times do
     div
       | Nav link
@@ -7,13 +7,14 @@ javascript:
   $(document).ready(function() {
     $(".menu-logo").click(function(e) {
       e.preventDefault();
-      if ($(".nav-menu").hasClass("hidden")) {
+      if ($(".nav-menu").attr("data-status") == "hidden") {
+        $(".nav-menu").removeClass("hidden");
         $("body").attr("style", "overflow: hidden;");
         showNavMenu();
       }
     });
     $(".movable-by-menu").click(function() {
-      if (!$(".nav-menu").hasClass("hidden")) {
+      if ($(".nav-menu").attr("data-status") == "open") {
         hideNavMenu();
         $("body").attr("style", "");
       }
@@ -26,13 +27,14 @@ javascript:
   var showOptions = {
     duration: 100,
     complete: function() {
-      $(".nav-menu").removeClass("hidden");
+      $(".nav-menu").attr("data-status", "open");
     }
   }
 
   var hideOptions = {
     duration: 100,
     complete: function () {
+      $(".nav-menu").attr("data-status", "hidden");
       $(".nav-menu").addClass("hidden");
     }
   }
