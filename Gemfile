@@ -12,6 +12,7 @@ gem 'slim'
 gem 'pg'
 gem 'font-awesome-sass'
 gem 'sass'
+gem 'actionview-encoded_mail_to'
 
 group :development do
   gem 'pry'
