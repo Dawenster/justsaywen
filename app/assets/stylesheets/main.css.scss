@@ -11,16 +11,22 @@
   background-color: #232322;
   ul {
     list-style-type: none;
+    padding: 0px;
   }
   li {
+    margin: 10px;
     a {
       color: grey;
-      font-family: 'Lato', sans-serif;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: bold;
       &:hover {
         text-decoration: none;
         color: white;
       }
     }
+  }
+  i {
+    margin-right: 10px;
   }
 }
 
@@ -51,4 +57,16 @@
   padding: 0;
   overflow: auto;
   background-color: white;
+}
+
+.social-links {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  a {
+    color: grey;
+    &:hover {
+      color: white;
+    }
+  }
 }
