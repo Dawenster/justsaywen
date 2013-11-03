@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'slim'
 gem 'pg'
 gem 'font-awesome-sass'
+gem 'sass'
 
 group :development do
   gem 'pry'

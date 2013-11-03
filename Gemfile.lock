@@ -133,6 +133,7 @@ DEPENDENCIES
   pg
   pry
   rails (= 4.0.0)
+  sass
   sass-rails (~> 4.0.0)
   sdoc
   slim
