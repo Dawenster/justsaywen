@@ -13,6 +13,7 @@ gem 'pg'
 gem 'font-awesome-sass'
 gem 'sass'
 gem 'actionview-encoded_mail_to'
+gem 'tumblr_client'
 
 group :development do
   gem 'pry'
