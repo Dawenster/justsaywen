@@ -1,7 +1,7 @@
 .nav-menu.hidden data-status="hidden"
   ul
-    li.active
-      a href="#"
+    li
+      a href="#" class="#{'active' if params[:controller] == 'blogs'}"
         i.fa.fa-home.fa-fw.fa-lg
         | Home (blog)
     li

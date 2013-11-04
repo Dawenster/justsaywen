@@ -1,2 +1,9 @@
+ruby:
+  case params[:controller]
+  when "blogs" then title = "Just Say Wen"
+  end
+
 .menu-logo.movable-by-menu
   = image_tag("https://s3-us-west-2.amazonaws.com/justsaywen/wen_logo.png", :width => 44)
+.section-title.movable-by-menu
+  = title

@@ -24,6 +24,9 @@
         color: white;
       }
     }
+    .active {
+      color: white !important;
+    }
   }
   i {
     margin-right: 10px;
@@ -36,6 +39,17 @@
   left: 10px;
   z-index: 100;
   cursor:pointer;
+}
+
+.section-title {
+  color: white;
+  position: absolute;
+  left: 64px;
+  top: 15px;
+  font-family: 'Sacramento', cursive;
+  font-size: 2em;
+  z-index: 100;
+  min-width: 100%;
 }
 
 .col-md-4 {
