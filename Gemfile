@@ -14,6 +14,7 @@ gem 'font-awesome-sass'
 gem 'sass'
 gem 'actionview-encoded_mail_to'
 gem 'tumblr_client'
+gem 'jquery-turbolinks'
 
 group :development do
   gem 'pry'

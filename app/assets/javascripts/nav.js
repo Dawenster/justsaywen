@@ -1,6 +1,5 @@
 $(document).ready(function() {
-  $(".menu-logo").click(function(e) {
-    e.preventDefault();
+  $(".menu-logo").click(function() {
     if ($(".nav-menu").attr("data-status") == "hidden") {
       $(".nav-menu").removeClass("hidden");
       $("body").attr("style", "overflow: hidden;");
@@ -15,6 +14,9 @@ $(document).ready(function() {
   })
   $(".menu-logo").on('dragstart', function(e) {
     e.preventDefault();
+  });
+  $(".nav-menu a").click(function() {
+    $(".nav-menu").attr("data-status", "hidden");
   });
 });
 
