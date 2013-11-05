@@ -37,6 +37,18 @@ body {
   }
 }
 
+.social-links {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  a {
+    color: grey;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
 .menu-logo {
   position: fixed;
   top: 10px;
@@ -60,8 +72,11 @@ body {
   height: 100%;
 }
 
+.col-md-4, .col-md-6, .col-sm-6, .col-xs-12 {
+  padding: 0 !important;
+}
+
 .col-md-4 {
-  padding: 0;
   height: 100%;
 }
 
@@ -71,26 +86,24 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  background-image:url('https://s3-us-west-2.amazonaws.com/justsaywen/david_wen_new_york_city.JPG');
   background-size: cover;
 }
 
 .col-md-8 {
-  padding: 0;
+  padding: 0 !important;
   overflow: auto;
   background-color: white;
   min-height: 100% !important;
   width: 100%;
 }
 
-.social-links {
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
-  a {
-    color: grey;
-    &:hover {
-      color: white;
-    }
-  }
+.right-content {
+  height: 100%;
+}
+
+.grid-item {
+  width: 100%;
+  height: 252px;
+  background-size: cover;
+  background-position: center;
 }

@@ -2,9 +2,13 @@
 .row
   = render "layouts/nav"
   .col-md-4.movable-by-menu
-    .info-bar
+    .info-bar style="background-image:url(#{eval(ENV['BACKGROUND_IMAGES'])[params[:controller]]})"
   .col-md-8.movable-by-menu
     .right-content
-      - 100.times do
-        div
-          | Something
+      .index-header
+        | ALL
+      - @posts.each do |post|
+          .col-md-6.col-sm-6.col-xs-12
+            .grid-item style="background-image:url(#{find_first_image(post["body"])})"
+              .grid-title
+                = post["title"]

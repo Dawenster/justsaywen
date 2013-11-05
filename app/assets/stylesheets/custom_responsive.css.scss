@@ -4,6 +4,10 @@
   .col-md-4 {
     height: 350px !important;
   }
+
+  .right-content {
+    padding: 30px 5%;
+  }
 }
 
 /*Small screens only*/
@@ -11,6 +15,10 @@
 @media (min-width: 768px) and (max-width: 992px) {
   .col-md-4 {
     height: 576px !important;
+  }
+
+  .right-content {
+    padding: 40px 10%;
   }
 }
 
@@ -35,5 +43,9 @@
 
   .info-bar {
     background-position: left;
+  }
+
+  .right-content {
+    padding: 50px 85px;
   }
 }
