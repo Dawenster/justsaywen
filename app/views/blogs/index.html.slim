@@ -6,9 +6,10 @@
   .col-md-8.movable-by-menu
     .right-content
       .index-header
-        | ALL
+        | All
       - @posts.each do |post|
           .col-md-6.col-sm-6.col-xs-12
             .grid-item style="background-image:url(#{find_first_image(post["body"])})"
+              .dark-overlay
               .grid-title
                 = post["title"]
