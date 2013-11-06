@@ -12,7 +12,7 @@
         - box_background = eval(ENV['BACKGROUND_IMAGES'])[controller]
         .col-md-6.col-sm-6.col-xs-12
           .grid-item-wrapper
-            .grid-item style="background-image:url(#{box_background["url"]}); background-position: #{box_background["position"]}"
+            .grid-item style="background-image:url(#{box_background["url"].insert(-5, "-sm")}); background-position: #{box_background["position"]}"
               = link_to(page_title, self.send("#{controller}_path"), :class => "hidden-link")
               .dark-overlay
               .grid-title
