@@ -1,8 +1,19 @@
 = render "layouts/menu_logo"
+.site-nav-overlay.clickable.hidden
 .row
   = render "layouts/nav"
   .col-md-4.movable-by-menu
-    .info-bar style="background-image:url(#{eval(ENV['BACKGROUND_IMAGES'])[params[:controller]]})"
+    .info-bar style="background-image:url(#{@background["url"]}); background-position: #{@background["position"]}"
+    .info-bar-dark-overlay
+    = render "layouts/menu_title"
   .col-md-8.movable-by-menu
     .right-content
-      | I home!
+      - @pages.each do |controller, page_title|
+        - box_background = eval(ENV['BACKGROUND_IMAGES'])[controller]
+        .col-md-6.col-sm-6.col-xs-12
+          .grid-item-wrapper
+            .grid-item style="background-image:url(#{box_background["url"]}); background-position: #{box_background["position"]}"
+              = link_to(page_title, self.send("#{controller}_path"), :class => "hidden-link")
+              .dark-overlay
+              .grid-title
+                = link_to(page_title, self.send("#{controller}_path"))

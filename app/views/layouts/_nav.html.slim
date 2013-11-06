@@ -9,27 +9,27 @@
         i.fa.fa-lightbulb-o.fa-fw.fa-lg
         | Blog
     li
-      a href="#"
+      a href="#{biographies_path}" class="#{'active' if params[:controller] == 'biographies'}"
         i.fa.fa-user.fa-fw.fa-lg
         | About me
     li
-      a href="#"
+      a href="#{works_path}" class="#{'active' if params[:controller] == 'works'}"
         i.fa.fa-briefcase.fa-fw.fa-lg
         | Work
     li
-      a href="#"
+      a href="#{galleries_path}" class="#{'active' if params[:controller] == 'galleries'}"
         i.fa.fa-camera-retro.fa-fw.fa-lg
         | Photography
     li
-      a href="#"
+      a href="#{books_path}" class="#{'active' if params[:controller] == 'books'}"
         i.fa.fa-book.fa-fw.fa-lg
         | Bookshelf
     li
-      a href="#"
+      a href="#{travels_path}" class="#{'active' if params[:controller] == 'travels'}"
         i.fa.fa-globe.fa-fw.fa-lg
         | Travels
     li
-      a href="#"
+      a href="#{creative_writings_path}" class="#{'active' if params[:controller] == 'creative_writings'}"
         i.fa.fa-pencil.fa-fw.fa-lg
         | Creative writing
 

@@ -1,0 +1,10 @@
+= render "layouts/menu_logo"
+.site-nav-overlay.clickable.hidden
+.row
+  = render "layouts/nav"
+  .col-md-4.movable-by-menu
+    .info-bar style="background-image:url(#{@background["url"]}); background-position: #{@background["position"]}"
+    .info-bar-dark-overlay
+    = render "layouts/menu_title"
+  .col-md-8.movable-by-menu
+    .right-content

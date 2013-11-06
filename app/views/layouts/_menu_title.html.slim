@@ -1,0 +1,26 @@
+ruby:
+  case params[:controller]
+  when "pages" 
+    title = "Just Say Wen"
+    subtitle = "A place to plan, do, and reflect on my life.\nIt's not a matter of if, but when."
+  when "blogs"
+    title = "Blog"
+  when "biographies"
+    title = "About Me"
+  when "works"
+    title = "Work"
+  when "galleries"
+    title = "Photography"
+  when "books"
+    title = "Bookshelf"
+  when "travels"
+    title = "Travels"
+  when "creative_writings"
+    title = "Creative Writing"
+  end
+
+.info-bar-bottom
+  .section-title
+    = title
+  .section-subtitle
+    = simple_format(subtitle)

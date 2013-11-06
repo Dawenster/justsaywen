@@ -5,5 +5,11 @@ JustSayWen::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root "pages#index"
   get "blog" => "blogs#index", :as => :blogs
+  get "about" => "biographies#index", :as => :biographies
+  get "work" => "works#index", :as => :works
+  get "photography" => "galleries#index", :as => :galleries
+  get "bookshelf" => "books#index", :as => :books
+  get "travels" => "travels#index", :as => :travels
+  get "creative-writing" => "creative_writings#index", :as => :creative_writings
   
 end
