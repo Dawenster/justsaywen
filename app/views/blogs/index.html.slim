@@ -3,7 +3,7 @@
 .row
   = render "layouts/nav"
   .col-md-4.movable-by-menu
-    .info-bar style="background-image:url(#{@background["url"]}); background-position: #{@background["position"]}"
+    .info-bar style="background-image:url(#{@background["url"]}); background-position: #{@background["position"]}; background-size: cover;"
     .info-bar-dark-overlay
     = render "layouts/menu_title"
   .col-md-8.movable-by-menu
@@ -13,7 +13,7 @@
       - @posts.each do |post|
           .col-md-6.col-sm-6.col-xs-12
             .grid-item-wrapper
-              .grid-item style="background-image:url(#{find_first_image(post["body"])})"
+              .grid-item style="background-image:url(#{find_first_image(post["body"])}); background-size: cover;"
                 .dark-overlay
                 .grid-title
                   = post["title"]
