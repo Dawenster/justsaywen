@@ -4,7 +4,8 @@ $(document).ready(function() {
       $(".nav-menu").removeClass("hidden");
       $(".site-nav-overlay").removeClass("hidden");
       $("body").attr("style", "overflow: hidden;");
-      showNavMenu();
+      // showNavMenu();
+      $(".movable-by-menu").addClass("menu-push-toright");
     }
   });
   $(".clickable").click(function() {
@@ -38,13 +39,19 @@ var hideOptions = {
 }
 
 function showNavMenu() {
-  $(".movable-by-menu").animate({
-    left: "+=280px"
-  }, showOptions);
+  // $(".movable-by-menu").animate({
+  //   left: "+=280px"
+  // }, showOptions);
+  // $(".movable-by-menu").attr("style", "left: 280px;");
+  // $(".nav-menu").attr("data-status", "open");
 }
 
 function hideNavMenu() {
-  $(".movable-by-menu").animate({
-    left: "-=280px"
-  }, hideOptions);
+  // $(".movable-by-menu").animate({
+  //   left: "-=280px"
+  // }, hideOptions);
+  // $(".movable-by-menu").attr("style", "left: 0px;");
+  // $(".nav-menu").attr("data-status", "hidden");
+  // $(".nav-menu").addClass("hidden");
+  // $(".site-nav-overlay").addClass("hidden");
 }
