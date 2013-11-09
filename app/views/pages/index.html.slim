@@ -8,14 +8,24 @@
     = render "layouts/menu_title"
   .col-md-8.movable-by-menu
     .right-content
-      .testbox.menu-push
-        | Harro I'm a test box
-      - @pages.each do |controller, page_title|
-        - box_background = eval(ENV['BACKGROUND_IMAGES'])[controller]
-        .col-md-6.col-sm-6.col-xs-12
-          .grid-item-wrapper
-            .grid-item style="background-image:url(#{box_background["url"].insert(-5, "-xs")}); background-position: #{box_background["position"]};"
-              = link_to(page_title, self.send("#{controller}_path"), :class => "hidden-link")
-              .dark-overlay
-              .grid-title
-                = link_to(page_title, self.send("#{controller}_path"))
+      .main-bucket
+        .main-header
+          .header
+            | Introduction
+        .post-bucket style="border-bottom: none;"
+          .post-title
+            | Nice to meet you
+          .post-content
+            | My name is David Wen.  This is a place for me to plan, do, and reflect on my life.  Professionally, I'm an entrepreneur, software engineer, and ex management consultant.  Personally, I like to backpack travel, take photos, write, and play sports where height matters.  Here's a glimpse into me, and if you like what you see, let's connect.  Just say Wen.
+      .main-bucket
+        .main-header
+          .header
+            | Latest blog posts
+        - @posts.each do |post|
+          .post-bucket
+            .post-title
+              = post["title"]
+            .post-content
+              = truncate_html(strip_tags(post["body"]).html_safe, length: 150, omission: '...')
+            .post-footer
+              = "#{minutes_to_read(strip_tags(post["body"]))} ⋅ #{blog_date(post["date"])}"

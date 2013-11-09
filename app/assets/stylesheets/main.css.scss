@@ -121,14 +121,18 @@ body {
   font-weight: bold;
   font-size: 2em;
   z-index: 100;
+  -webkit-font-smoothing: antialiased;
 }
 
 .section-subtitle {
   position: absolute;
   top: 40px;
-  color: #DEDEDC;
+  // color: #DEDEDC;
+  color: white;
   font-family: 'Roboto Slab', serif;
   z-index: 100;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
 }
 
 .col-md-8 {
@@ -150,6 +154,63 @@ body {
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #DEDEDC;
+  -webkit-font-smoothing: antialiased;
+}
+
+.main-bucket {
+  padding-bottom: 50px;
+}
+
+.main-header {
+  height: 40px;
+  border-top: 1px solid #dededc;
+  border-bottom: 1px solid #dededc;
+  -webkit-font-smoothing: antialiased;
+  .header {
+    font-size: 12px;
+    color: #b3b3b1;
+    font-family: "freight-sans-pro","Myriad","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    font-weight: 700;
+    display: block;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    -webkit-transition: color .1s linear;
+    -moz-transition: color .1s linear;
+    -ms-transition: color .1s linear;
+    -o-transition: color .1s linear;
+    transition: color .1s linear;
+  }
+}
+
+.post-bucket {
+  border-bottom: 1px solid #f2f2f0;
+}
+
+.post-title {
+  font-family: 'Myriad', sans-serif;
+  font-weight: bold;
+  font-size: 2.3em;
+  -webkit-font-smoothing: antialiased;
+}
+
+.post-content {
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.post-footer {
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  color: #b3b3b1;
+  font-weight: 400;
 }
 
 .grid-item-wrapper {
@@ -222,18 +283,4 @@ body {
   overflow-x: hidden;
   position: relative;
   left: 0;
-}
- 
-.menu-push-toright {
-  left: 280px;
-}
- 
-.menu-push-toleft {
-  left: -280px;
-}
-
-.movable-by-menu {
-  -webkit-transition: all 1.3s ease;
-  -moz-transition: all 1.3s ease;
-  transition: all 1.3s ease;
 }

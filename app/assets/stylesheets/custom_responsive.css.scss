@@ -32,6 +32,10 @@
   .info-bar {
     background-position: left bottom;
   }
+
+  .post-bucket {
+    padding: 30px 0;
+  }
 }
 
 /*Medium and large screens*/
@@ -51,5 +55,9 @@
 
   .right-content {
     padding: 50px 85px;
+  }
+
+  .post-bucket {
+    padding: 35px 0;
   }
 }
