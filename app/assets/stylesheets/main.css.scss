@@ -268,8 +268,13 @@ body {
   padding: 20px;
 }
 
-.menu-push {
-  overflow-x: hidden;
-  position: relative;
-  left: 0;
+.read-more {
+  text-align: right;
+  padding-bottom: 50px;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  color: #b3b3b1;
+  font-family: "freight-sans-pro","Myriad","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
 }
