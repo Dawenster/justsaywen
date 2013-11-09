@@ -1,1 +1,18 @@
-= @post["body"].html_safe
+= render "layouts/menu_logo"
+.site-nav-overlay.clickable.hidden
+.row
+  = render "layouts/nav"
+  .detail-wrapper.movable-by-menu
+    .detail-bucket
+      .about-me-side
+        .about-me-tidbit
+          = image_tag("https://s3-us-west-2.amazonaws.com/justsaywen/david_wen_avatar.png", :class => "img-circle", :width => 80)
+          .author-name
+            | David Wen
+          .author-details
+            = "Entrepreneur, software engineer, ex management consultant.  #{@random_fact}"
+      .detail-image style="background-image:url(#{find_first_image(@post["body"])});"
+      .detail-title
+        = @post["title"].html_safe
+      .detail-content
+        = remove_first_image(@post["body"]).html_safe

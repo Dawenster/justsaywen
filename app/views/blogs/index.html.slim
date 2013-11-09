@@ -15,8 +15,10 @@
         - @posts.each do |post|
           .post-bucket
             .post-title
-              = post["title"]
+              = link_to(post["title"], blog_path(post["slug"], post["id"]))
             .post-content
-              = truncate_html(strip_tags(post["body"]).html_safe, length: 150, omission: '...')
+              = link_to(truncate_html(post["body"].html_safe, length: 150, omission: '...'), blog_path(post["slug"], post["id"]))
             .post-footer
               = "#{minutes_to_read(strip_tags(post["body"]))} ⋅ #{blog_date(post["date"])}"
+      .read-more
+        = link_to("More >", blogs_path)

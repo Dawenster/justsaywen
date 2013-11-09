@@ -11,7 +11,7 @@ body {
 .site-nav-overlay {
   display: block;
   left: 280px;
-  z-index: 900;
+  z-index: 1100;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -66,6 +66,14 @@ body {
   cursor: pointer;
 }
 
+.menu-logo-dup {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1200;
+  cursor: pointer;
+}
+
 .row {
   height: 100%;
 }
@@ -88,6 +96,7 @@ body {
   top: 0;
   left: 0;
   background-size: cover;
+  background-color: white;
 }
 
 .info-bar-dark-overlay {
@@ -126,7 +135,6 @@ body {
 .section-subtitle {
   position: absolute;
   top: 40px;
-  // color: #DEDEDC;
   color: white;
   font-family: 'Roboto Slab', serif;
   z-index: 100;
@@ -216,6 +224,71 @@ body {
   -webkit-font-smoothing: antialiased;
   color: #b3b3b1;
   font-weight: 400;
+}
+
+.detail-wrapper {
+  height: 100%;
+  overflow: auto;
+  padding-top: 120px;
+  position: relative;
+  background-color: white;
+}
+
+.about-me-tidbit {
+  position: absolute;
+  text-align: right;
+  width: 160px;
+  margin-left: -230px;
+}
+
+.author-name {
+  font-weight: 700;
+  display: block;
+  font-size: 18px;
+  line-height: 1.2;
+  font-family: 'Myriad', sans-serif;
+  margin-top: 5px;
+  padding-right: 3px;
+}
+
+.author-details {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #666665;
+  word-wrap: break-word;
+  font-weight: 200;
+  font-style: italic;
+  font-family: 'Roboto Slab', serif;
+  padding-right: 3px;
+}
+
+.detail-bucket {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.detail-image {
+  width: 100%;
+  min-height: 400px;
+  background-size: cover;
+}
+
+.detail-title {
+  font-family: 'Myriad', sans-serif;
+  font-weight: bold;
+  font-size: 3.4em;
+  -webkit-font-smoothing: antialiased;
+  color: black;
+}
+
+.detail-content {
+  font-family: 'Roboto Slab', serif;
+  font-size: 22px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: black;
 }
 
 .grid-item-wrapper {

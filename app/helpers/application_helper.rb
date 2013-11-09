@@ -3,14 +3,20 @@ module ApplicationHelper
     regexes = [/http:\/\/media.tumblr.com.*.jpg\b/, /http:\/\/media.tumblr.com.*.png\b/, /http:\/\/media.tumblr.com.*.jpeg\b/, /http:\/\/media.tumblr.com.*.gif\b/]
     regexes.each do |regex|
       if str.match regex
-        return str.match regex
+        return str.match(regex)[0]
       end
     end
   end
 
+  def remove_first_image(str)
+    doc = Nokogiri::HTML(str)
+    doc.search('.//img').first.remove
+    return doc.to_html
+  end
+
   def minutes_to_read(str)
     arbitrary_words_per_minute = 200
-    minutes = str.split.size / arbitrary_words_per_minute
+    minutes = (str.split.size.to_f / arbitrary_words_per_minute).ceil
     if minutes == 0
       return "Less than 1 min read"
     else
