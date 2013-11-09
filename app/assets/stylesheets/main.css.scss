@@ -30,8 +30,7 @@ body {
     margin: 10px;
     a {
       color: grey;
-      font-family: 'Source Sans Pro', sans-serif;
-      font-weight: bold;
+      font-family: 'Myriad', sans-serif;
       font-size: 1.2em;
       &:hover {
         text-decoration: none;
@@ -145,16 +144,6 @@ body {
 
 .right-content {
   height: 100%;
-}
-
-.index-header {
-  color: grey;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: bold;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #DEDEDC;
-  -webkit-font-smoothing: antialiased;
 }
 
 .main-bucket {

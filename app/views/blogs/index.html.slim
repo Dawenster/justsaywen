@@ -8,12 +8,15 @@
     = render "layouts/menu_title"
   .col-md-8.movable-by-menu
     .right-content
-      .index-header
-        | ALL
-      - @posts.each do |post|
-          .col-md-6.col-sm-6.col-xs-12
-            .grid-item-wrapper
-              .grid-item style="background-image:url(#{find_first_image(post["body"])});"
-                .dark-overlay
-                .grid-title
-                  = post["title"]
+      .main-bucket
+        .main-header
+          .header
+            | Latest blog posts
+        - @posts.each do |post|
+          .post-bucket
+            .post-title
+              = post["title"]
+            .post-content
+              = truncate_html(strip_tags(post["body"]).html_safe, length: 150, omission: '...')
+            .post-footer
+              = "#{minutes_to_read(strip_tags(post["body"]))} ⋅ #{blog_date(post["date"])}"
