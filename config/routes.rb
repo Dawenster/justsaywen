@@ -12,4 +12,5 @@ JustSayWen::Application.routes.draw do
   get "travels" => "travels#index", :as => :travels
   get "creative-writing" => "creative_writings#index", :as => :creative_writings
   
+  get "/:slug/:tumblr_id" => "blogs#show", :as => :blog
 end
