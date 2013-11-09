@@ -26,7 +26,7 @@
             .post-title
               = link_to(post["title"], blog_path(post["slug"], post["id"]))
             .post-content
-              = truncate_html(post["body"].html_safe, length: 150, omission: '...')
+              = link_to(truncate_html(post["body"].html_safe, length: 150, omission: '...'), blog_path(post["slug"], post["id"]))
             .post-footer
               = "#{minutes_to_read(post["body"])} ⋅ #{blog_date(post["date"])}"
       .read-more
