@@ -5,16 +5,16 @@
   .detail-wrapper.movable-by-menu
     .detail-bucket
       .about-me-side
-        .about-me-tidbit
-          = image_tag("https://s3-us-west-2.amazonaws.com/justsaywen/david_wen_avatar.png", :class => "img-circle", :width => 80)
-          .author-name
-            | David Wen
-          .author-details
-            = "Entrepreneur, software engineer, ex management consultant.  #{@random_fact}"
+        = render "layouts/about_me_tidbit"
       .detail-image style="background-image:url(#{find_first_image(@post["body"])});"
-      .post-footer
-        = "#{minutes_to_read(strip_tags(@post["body"]))} ⋅ #{blog_date(@post["date"])}"
-      .detail-title
-        = @post["title"].html_safe
-      .detail-content
-        = remove_first_image(@post["body"]).html_safe
+      .detail-content-holder
+        .post-footer
+          = "#{minutes_to_read(strip_tags(@post["body"]))} ⋅ #{blog_date(@post["date"])}"
+        .detail-title
+          = @post["title"].html_safe
+        .detail-content
+          = remove_first_image(@post["body"]).html_safe
+        .about-me-bottom
+          = render "layouts/about_me_tidbit"
+        .next-article
+          | This is the next article

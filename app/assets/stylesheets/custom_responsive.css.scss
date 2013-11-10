@@ -12,6 +12,10 @@
   .info-bar-bottom {
     margin-bottom: 40px;
   }
+
+  .detail-content-holder {
+    padding: 0 10px;
+  }
 }
 
 /*Small screens only*/
@@ -24,6 +28,10 @@
   .right-content {
     padding: 40px 10%;
   }
+
+  .detail-wrapper {
+    padding-top: 120px;
+  }
 }
 
 /*Extra small and small screens*/
@@ -35,6 +43,47 @@
 
   .post-bucket {
     padding: 30px 0;
+  }
+
+  .detail-content {
+    font-size: 18px;
+  }
+}
+
+/*1200 screen size and below*/
+
+@media (max-width: 1200px) {
+  .about-me-side {
+    display: none;
+  }
+
+  .about-me-tidbit {
+    width: 350px;
+    img {
+      float: left;
+      margin-right: 20px;
+    }
+  }
+
+  .about-me-bottom {
+    border-top: 1px solid #f2f2f0;
+    padding-top: 31px;
+    padding-bottom: 31px;
+  }
+}
+
+/*1200 screen size and above*/
+
+@media (min-width: 1200px) {
+  .about-me-bottom {
+    display: none;
+  }
+
+  .about-me-tidbit {
+    position: absolute;
+    text-align: right;
+    width: 160px;
+    margin-left: -230px;
   }
 }
 
@@ -59,5 +108,13 @@
 
   .post-bucket {
     padding: 35px 0;
+  }
+
+  .detail-wrapper {
+    padding-top: 120px;
+  }
+
+  .detail-content {
+    font-size: 22px;
   }
 }
