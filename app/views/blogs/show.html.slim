@@ -6,7 +6,8 @@
     .detail-bucket
       .about-me-side
         = render "layouts/about_me_tidbit"
-      .detail-image style="background-image:url(#{find_first_image(@post["body"])});"
+      .detail-image
+        = image_tag("#{find_first_image(@post["body"])}", :width => "100%")
       .detail-content-holder
         .post-footer
           = "#{minutes_to_read(strip_tags(@post["body"]))} ⋅ #{blog_date(@post["date"])}"
@@ -16,5 +17,13 @@
           = remove_first_image(@post["body"]).html_safe
         .about-me-bottom
           = render "layouts/about_me_tidbit"
-        .next-article
-          | This is the next article
+    .next-article
+      .next-article-bucket
+        .next-article-read-next
+          | Read next
+        .detail-title
+          = @next_post["title"].html_safe
+        .detail-content
+          = truncate_html(@next_post["body"].html_safe, length: 150, omission: '...')
+        .post-footer
+          = "#{minutes_to_read(strip_tags(@next_post["body"]))} ⋅ #{blog_date(@next_post["date"])}"

@@ -10,5 +10,10 @@ class BlogsController < ApplicationController
     @random_fact = ENV['RANDOM_FACTS'].split("|").sample.strip
     client = Tumblr::Client.new
     @post = client.posts("dawenster.tumblr.com", :id => params[:tumblr_id])["posts"][0]
+    posts = client.posts("dawenster.tumblr.com", :filter => "text")["posts"]
+    @next_post = @post
+    until @next_post["slug"] != @post["slug"]
+      @next_post = posts.sample
+    end
   end
 end

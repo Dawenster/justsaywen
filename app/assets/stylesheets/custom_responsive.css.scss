@@ -16,6 +16,10 @@
   .detail-content-holder {
     padding: 0 10px;
   }
+
+  .next-article-bucket {
+    padding: 60px 10px;
+  }
 }
 
 /*Small screens only*/
@@ -31,6 +35,10 @@
 
   .detail-wrapper {
     padding-top: 120px;
+  }
+
+  .next-article-bucket {
+    padding: 60px 0px;
   }
 }
 
@@ -117,5 +125,9 @@
 
   .detail-content {
     font-size: 22px;
+  }
+
+  .next-article-bucket {
+    padding: 60px 0px;
   }
 }

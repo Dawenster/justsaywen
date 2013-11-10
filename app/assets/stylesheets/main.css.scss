@@ -264,8 +264,6 @@ p {
 
 .detail-image {
   width: 100%;
-  min-height: 400px;
-  background-size: cover;
   margin-bottom: 30px;
 }
 
@@ -288,7 +286,33 @@ p {
 }
 
 .next-article {
-  margin: 50px 0;
+  margin: 50px 0 0 0;
+  background: #f9f9f7;
+  border-top: 1px solid #dededc;
+  cursor: pointer;
+}
+
+.next-article-bucket {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.next-article-read-next {
+  font-family: 'Roboto Slab', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px;
+  padding: 20px 0 30px;
+  text-align: center;
+  color: #b3b3b1;
+  &:after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    margin: 10px auto 0;
+    background: #dededc;
+  }
 }
 
 .grid-item-wrapper {
