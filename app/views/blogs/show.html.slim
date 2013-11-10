@@ -12,6 +12,8 @@
           .author-details
             = "Entrepreneur, software engineer, ex management consultant.  #{@random_fact}"
       .detail-image style="background-image:url(#{find_first_image(@post["body"])});"
+      .post-footer
+        = "#{minutes_to_read(strip_tags(@post["body"]))} ⋅ #{blog_date(@post["date"])}"
       .detail-title
         = @post["title"].html_safe
       .detail-content

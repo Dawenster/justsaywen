@@ -271,6 +271,7 @@ body {
   width: 100%;
   min-height: 400px;
   background-size: cover;
+  margin-bottom: 30px;
 }
 
 .detail-title {
@@ -278,7 +279,8 @@ body {
   font-weight: bold;
   font-size: 3.4em;
   -webkit-font-smoothing: antialiased;
-  color: black;
+  line-height: 1;
+  margin-top: 15px;
 }
 
 .detail-content {
