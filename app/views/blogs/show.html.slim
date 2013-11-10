@@ -17,7 +17,7 @@
           = remove_first_image(@post["body"]).html_safe
         .about-me-bottom
           = render "layouts/about_me_tidbit"
-    .next-article
+    .next-article data-next-article-url="#{blog_path(@next_post["slug"], @next_post["id"])}"
       .next-article-bucket
         .next-article-read-next
           | Read next
@@ -27,3 +27,8 @@
           = truncate_html(@next_post["body"].html_safe, length: 150, omission: '...')
         .post-footer
           = "#{minutes_to_read(strip_tags(@next_post["body"]))} ⋅ #{blog_date(@next_post["date"])}"
+
+javascript:
+  $(".next-article").click(function() {
+    window.location = $(".next-article").attr("data-next-article-url");
+  });
