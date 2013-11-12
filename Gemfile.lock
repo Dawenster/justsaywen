@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/albandiguer/galleria-rails.git
+  revision: 0ce52dbe0dd5730d24c39bbb35a86d796114e1c3
+  specs:
+    galleria-rails (1.2.9)
+      railties (>= 3.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -155,6 +162,7 @@ DEPENDENCIES
   binding_of_caller
   coffee-rails (~> 4.0.0)
   font-awesome-sass
+  galleria-rails!
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks
