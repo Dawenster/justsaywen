@@ -17,8 +17,12 @@
             .post-title
               = link_to(post["title"], blog_path(post["slug"], post["id"]))
             .post-content
-              = link_to(truncate_html(post["body"].html_safe, length: 150, omission: '...'), blog_path(post["slug"], post["id"]))
+              = link_to(truncate_html(strip_tags(post["body"]).html_safe, length: 150, omission: '...'), blog_path(post["slug"], post["id"]))
             .post-footer
               = "#{minutes_to_read(strip_tags(post["body"]))} ⋅ #{blog_date(post["date"])}"
       .read-more
-        = link_to("More >", blogs_path)
+        - page = params[:page].to_i || 0
+        .read-previous class="#{'hidden' if params[:page] == nil || params[:page].to_i == 0}"
+          = link_to("< Previous", blogs_path(:page => page - 1))
+        .read-next class="#{'hidden' if @hide_last}"
+          = link_to("Next >", blogs_path(:page => page + 1))

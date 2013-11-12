@@ -381,8 +381,7 @@ p {
   padding: 20px;
 }
 
-.read-more {
-  text-align: right;
+.read-previous, .read-next {
   a {
     padding-bottom: 50px;
     -webkit-font-smoothing: antialiased;
@@ -396,4 +395,12 @@ p {
       color: #b3b3b1;
     }
   }
+}
+
+.read-previous {
+  float: left;
+}
+
+.read-next {
+  float: right;
 }

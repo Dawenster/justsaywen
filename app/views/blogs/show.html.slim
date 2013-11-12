@@ -7,14 +7,17 @@
       .about-me-side
         = render "layouts/about_me_tidbit"
       .detail-image
-        = image_tag("#{find_first_image(@post["body"])}", :width => "100%")
+        = image_tag("#{@post["first_image"]}", :width => "100%")
       .detail-content-holder
         .post-footer
           = "#{minutes_to_read(strip_tags(@post["body"]))} ⋅ #{blog_date(@post["date"])}"
         .detail-title
           = @post["title"].html_safe
         .detail-content
-          = remove_first_image(@post["body"]).html_safe
+          - if params[:tumblr_id] == "old"
+            = @post["body"].html_safe
+          - else
+            = remove_first_image(@post["body"]).html_safe
         .about-me-bottom
           = render "layouts/about_me_tidbit"
     .next-article data-next-article-url="#{blog_path(@next_post["slug"], @next_post["id"])}"
