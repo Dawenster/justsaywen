@@ -56,6 +56,10 @@
   .detail-content {
     font-size: 18px;
   }
+
+  .google-map {
+    height: 1000px;
+  }
 }
 
 /*1200 screen size and below*/
@@ -129,5 +133,9 @@
 
   .next-article-bucket {
     padding: 60px 0px;
+  }
+
+  .google-map {
+    height: 100%;
   }
 }
