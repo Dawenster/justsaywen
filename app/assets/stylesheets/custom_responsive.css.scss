@@ -60,6 +60,20 @@
   .google-map {
     height: 1000px;
   }
+
+  .top-of-page {
+    width: 44px;
+    height: 44px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 3.8;
+  }
 }
 
 /*1200 screen size and below*/
