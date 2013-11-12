@@ -33,5 +33,6 @@ ENV['RANDOM_FACTS'] = <<-eos
   He double knots his shoelaces.|
   He wears the number 11 on sports teams.|
   He prefers appetizers to drinks.|
-  He always does an extra pushup for his friend Andrew.
+  He always does an extra pushup for his friend Andrew.|
+  He likes to type as if he's playing the piano dramatically.
 eos
