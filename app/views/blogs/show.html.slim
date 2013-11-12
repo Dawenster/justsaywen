@@ -27,7 +27,7 @@
         .detail-title
           = @next_post["title"].html_safe
         .detail-content
-          = truncate_html(@next_post["body"].html_safe, length: 150, omission: '...')
+          = truncate_html(strip_tags(@next_post["body"]).html_safe, length: 150, omission: '...')
         .post-footer
           = "#{minutes_to_read(strip_tags(@next_post["body"]))} ⋅ #{blog_date(@next_post["date"])}"
 

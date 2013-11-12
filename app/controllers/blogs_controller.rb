@@ -34,6 +34,9 @@ class BlogsController < ApplicationController
       @post["first_image"] = find_first_image(@post["body"])
     end
     posts = client.posts("dawenster.tumblr.com", :filter => "text")["posts"]
+    Blog.all.each do |old_blog|
+      posts << { "slug" => old_blog.slug, "title" => old_blog.title, "body" => old_blog.body, "date" => old_blog.posted_at }
+    end
     @next_post = @post
     until @next_post["slug"] != @post["slug"]
       @next_post = posts.sample
