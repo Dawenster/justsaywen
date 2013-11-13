@@ -20,6 +20,11 @@
   .next-article-bucket {
     padding: 30px 10px;
   }
+
+  .grid-item {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 /*Small screens only*/
@@ -39,6 +44,11 @@
 
   .next-article-bucket {
     padding: 60px 0px;
+  }
+
+  .grid-item {
+    width: 45%;
+    margin: 10px;
   }
 }
 
@@ -151,5 +161,10 @@
 
   .google-map {
     height: 100%;
+  }
+
+  .grid-item {
+    width: 45%;
+    margin: 10px;
   }
 }

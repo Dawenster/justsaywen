@@ -7,12 +7,12 @@
     .info-bar-dark-overlay
     = render "layouts/menu_title"
   .col-md-8.movable-by-menu
-    .galleria style="height: 100%;"
-
-javascript:
-  Galleria.run('.galleria', {
-    flickr: 'set:72157637614753233',
-    flickrOptions: {
-      sort: 'date-posted-asc'
-    }
-  });
+    .right-content
+      .grid-item-wrapper
+        - @sets.each do |set|
+          - info = flickr.photos.getInfo(:photo_id => set["primary"])
+          .grid-item style="background-image:url(#{FlickRaw.url(info)})"
+            .hidden-link
+            .dark-overlay
+            .grid-title
+              = set["title"]

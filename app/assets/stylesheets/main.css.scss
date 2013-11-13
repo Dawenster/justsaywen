@@ -316,13 +316,13 @@ p {
 }
 
 .grid-item-wrapper {
-  margin: 10px;
+  // margin: 10px;
 }
 
 .grid-item {
   cursor: pointer;
   position: relative;
-  width: 100%;
+  display: inline-block;
   height: 252px;
   background-size: cover;
   -webkit-border-radius: 5px;
