@@ -11,8 +11,12 @@
       .grid-item-wrapper
         - @sets.each do |set|
           - info = flickr.photos.getInfo(:photo_id => set["primary"])
-          .grid-item style="background-image:url(#{FlickRaw.url(info)})"
-            .hidden-link
+          .grid-item style="background-image:url(#{FlickRaw.url(info)})" data-url="#{gallery_path(set["title"], set["id"])}"
             .dark-overlay
             .grid-title
-              = set["title"]
+              = link_to(set["title"], gallery_path(set["title"], set["id"]))
+
+javascript:
+  $(".grid-item").click(function(e) {
+    window.location = e.target.attributes[1].value;
+  });
