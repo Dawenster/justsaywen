@@ -1,0 +1,14 @@
+.top-of-page style="width: 105px !important; cursor: auto !important; line-height: 2.9 !important;"
+  span
+    a href="#{galleries_path}"
+      i.fa.fa-th-large.fa-lg
+  span style="margin-left: 15px;"
+    a href="#{gallery_path(@next_set["title"], @next_set["id"])}"
+      i.fa.fa-mail-forward.fa-lg
+
+javascript:
+  $(".top-of-page").click(function() {
+    $("body").animate({
+      scrollTop: 0
+    });
+  });

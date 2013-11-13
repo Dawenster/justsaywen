@@ -78,6 +78,27 @@ p {
   cursor: pointer;
 }
 
+.top-of-page {
+  width: 44px;
+  height: 44px;
+  padding-right: 7px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  text-align: right;
+  line-height: 3.8;
+  a {
+    color: grey;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
 .row {
   height: 100%;
 }
