@@ -15,4 +15,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require turbolinks
+//= require galleria-1.3.2.min
+//= require galleria.classic.min
+//= require galleria.flickr.min
 //= require_tree .
