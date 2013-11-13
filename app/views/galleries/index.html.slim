@@ -7,4 +7,12 @@
     .info-bar-dark-overlay
     = render "layouts/menu_title"
   .col-md-8.movable-by-menu
-    .right-content
+    .galleria style="height: 100%;"
+
+javascript:
+  Galleria.run('.galleria', {
+    flickr: 'set:72157637614753233',
+    flickrOptions: {
+      sort: 'date-posted-asc'
+    }
+  });
