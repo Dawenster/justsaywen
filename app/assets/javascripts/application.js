@@ -15,6 +15,4 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require turbolinks
-//= require galleria
-//= require galleria.classic
 //= require_tree .
