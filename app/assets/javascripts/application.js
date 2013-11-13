@@ -18,4 +18,5 @@
 //= require galleria-1.3.2.min
 //= require galleria.classic.min
 //= require galleria.flickr.min
+//= require main
 //= require_tree .
