@@ -1,0 +1,34 @@
+= render "layouts/menu_logo"
+.site-nav-overlay.clickable.hidden
+.row
+  = render "layouts/nav"
+  .detail-wrapper.movable-by-menu
+    .detail-bucket
+      .about-me-side
+        = render "layouts/about_me_tidbit"
+      .detail-image
+        = image_tag("#{@book.image}", :width => "100%")
+      .detail-content-holder
+        .post-footer
+          = "#{minutes_to_read(strip_tags(@book.review))} ⋅ #{@book.created_at.strftime("%b %d, %Y")}"
+        .detail-title
+          = @book.title.html_safe
+        .detail-content
+          = @book.review.html_safe
+        .about-me-bottom
+          = render "layouts/about_me_tidbit"
+    .next-article data-next-article-url="#{book_path(@next_book.to_slug)}"
+      .next-article-bucket
+        .next-article-read-next
+          | Read next
+        .detail-title
+          = @next_book.title.html_safe
+        .detail-content
+          = truncate_html(strip_tags(@next_book.review).html_safe, length: 150, omission: '...')
+        .post-footer
+          = "#{minutes_to_read(strip_tags(@next_book.review))} ⋅ #{@next_book.created_at.strftime("%b %d, %Y")}"
+
+javascript:
+  $(".next-article").click(function() {
+    window.location = $(".next-article").attr("data-next-article-url");
+  });

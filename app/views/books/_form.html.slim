@@ -1,0 +1,38 @@
+.row style="overflow: auto; padding: 10px;"
+  = simple_form_for @book, :url => url_for(:action => "#{@book.id ? 'update' : 'create'}", :controller => "books") do |f|
+    form role="form"
+      .form-group
+        label for="book_title"
+          | Title
+        = f.text_field :title, :value => @book.title, :class => "form-control", :placeholder => "Title"
+
+      .form-group
+        label for="book_image"
+          | Image
+        = f.text_field :image, :value => @book.title, :class => "form-control", :placeholder => "Image url"
+
+      .form-group
+        label for="book_author"
+          | Author
+        = f.text_field :author, :value => @book.author, :class => "form-control", :placeholder => "Author"
+
+      .form-group
+        label for="book_review"
+          | Review
+        = f.text_area :review, :value => @book.review, :class => "form-control", :placeholder => "Review", :rows => 10
+
+      .form-group
+        label for="book_total_pages"
+          | Total pages
+        = f.text_field :total_pages, :value => @book.total_pages, :class => "form-control", :placeholder => "Total pages"
+
+      .form-group
+        label for="book_pages_read"
+          | Pages read
+        = f.text_field :pages_read, :value => @book.pages_read, :class => "form-control", :placeholder => "Pages read"
+
+      button.btn.btn-default type="submit"
+        | Submit
+
+  - if @book.id
+    = link_to("Delete", url_for(:action => "destroy", :controller => "books"), :method => "destroy")
