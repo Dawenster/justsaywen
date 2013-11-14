@@ -31,6 +31,11 @@
           | Pages read
         = f.text_field :pages_read, :value => @book.pages_read, :class => "form-control", :placeholder => "Pages read"
 
+      .form-group
+        label for="book_year"
+          | Year
+        = f.text_field :year, :value => @book.year, :class => "form-control", :placeholder => "Year"
+
       button.btn.btn-default type="submit"
         | Submit
 

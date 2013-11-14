@@ -1,7 +1,17 @@
 class BooksController < ApplicationController
   def index
     @background = eval(ENV['BACKGROUND_IMAGES'])[params[:controller]]
-    @books = Book.order("created_at DESC")
+    years = []
+    year = Time.now.year
+    until year == 2009
+      years << year
+      year -= 1
+    end
+    @books = {}
+    years.each do |year|
+      books_of_the_year = Book.where(:year => year).order("created_at DESC")
+      @books[year] = books_of_the_year unless books_of_the_year.empty?
+    end
   end
 
   def show
@@ -36,6 +46,6 @@ class BooksController < ApplicationController
   private
 
   def books_params
-    params.require(:book).permit(:title, :image, :author, :review, :total_pages, :pages_read)
+    params.require(:book).permit(:title, :image, :author, :review, :total_pages, :pages_read, :year)
   end
 end
