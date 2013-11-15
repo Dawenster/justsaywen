@@ -29,4 +29,14 @@
               .post-content
                 = link_to(truncate_html(book.review.html_safe, length: 150, omission: '...'), book_path(book.title))
               .post-footer
-                = "#{minutes_to_read(book.review)} ⋅ #{book.created_at.strftime("%b %d, %Y")}"
+                = "By: #{book.author} ⋅ Review: #{minutes_to_read(book.review)} ⋅ Pages: #{book.total_pages} (#{book.percentage_read}% read)"
+      .main-bucket
+        .main-header
+          .header
+            | Other
+          .post-bucket
+            .post-title
+              = link_to("Quotes and motivations", quotes_and_motivations_path)
+            .post-content
+              - content = "These are some of my favourite sayings.  They have helped keep me motivated, entertained, and inspired.  I mostly enjoy short quotes that include some sort of clever twist or logic, as opposed to long quotes that simply tell you stuff.  Would love to hear some of your favourite quotes!"
+              = link_to(content, quotes_and_motivations_path)

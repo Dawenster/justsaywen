@@ -8,4 +8,8 @@ class Book < ActiveRecord::Base
   def to_slug
     self.title.parameterize
   end
+
+  def percentage_read
+    (self.pages_read.to_f / self.total_pages * 100).ceil
+  end
 end

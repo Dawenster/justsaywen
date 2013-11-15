@@ -43,6 +43,9 @@ class BooksController < ApplicationController
     redirect_to books_path
   end
 
+  def quotes_and_motivations
+  end
+
   private
 
   def books_params
