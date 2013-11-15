@@ -26,7 +26,7 @@
         .detail-content
           = truncate_html(strip_tags(@next_book.review).html_safe, length: 150, omission: '...')
         .post-footer
-          = "By: #{book.author} ⋅ Review: #{minutes_to_read(book.review)} ⋅ Pages: #{book.total_pages} (#{book.percentage_read}% read)"
+          = "By: #{@next_book.author} ⋅ Review: #{minutes_to_read(@next_book.review)} ⋅ Pages: #{@next_book.total_pages} (#{@next_book.percentage_read}% read)"
 
 javascript:
   $(".next-article").click(function() {
