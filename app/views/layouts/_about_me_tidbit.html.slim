@@ -3,4 +3,5 @@
   .author-name
     | David Wen
   .author-details
-    = "Entrepreneur, software engineer, ex management consultant.  #{@random_fact}"
+    - random_fact = ENV['RANDOM_FACTS'].split("|").sample.strip
+    = "Entrepreneur, software engineer, ex management consultant.  #{random_fact}"

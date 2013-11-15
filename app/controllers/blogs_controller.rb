@@ -19,7 +19,6 @@ class BlogsController < ApplicationController
   end
 
   def show
-    @random_fact = ENV['RANDOM_FACTS'].split("|").sample.strip
     client = Tumblr::Client.new
     @post = client.posts("dawenster.tumblr.com", :id => params[:tumblr_id])["posts"][0]
     @post["first_image"] = find_first_image(@post["body"])
