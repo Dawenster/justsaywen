@@ -25,9 +25,9 @@ class BlogsController < ApplicationController
     @post["first_image"] = find_first_image(@post["body"])
     current_tag = find_tag_number(@post["tags"])
     if current_tag == 1
-      @next_post = client.posts("dawenster.tumblr.com", :tag => "new", :limit => 1)["posts"][0]
+      @next_post = client.posts("dawenster.tumblr.com", :filter => "text", :tag => "new", :limit => 1)["posts"][0]
     else
-      @next_post = client.posts("dawenster.tumblr.com", :tag => current_tag - 1)["posts"][0]
+      @next_post = client.posts("dawenster.tumblr.com", :filter => "text", :tag => current_tag - 1)["posts"][0]
     end
   end
 

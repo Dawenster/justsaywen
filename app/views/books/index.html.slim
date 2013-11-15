@@ -29,7 +29,7 @@
               .post-content
                 = link_to(truncate_html(book.review.html_safe, length: 150, omission: '...'), book_path(book.title))
               .post-footer
-                = "By: #{book.author} ⋅ Review: #{minutes_to_read(book.review)} ⋅ Pages: #{book.total_pages} (#{book.percentage_read}% read)"
+                = render "book_footer", :book => book
       .main-bucket
         .main-header
           .header

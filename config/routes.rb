@@ -9,8 +9,8 @@ JustSayWen::Application.routes.draw do
   get "/photography/:gallery/:flickr_set_id" => "galleries#show", :as => :gallery
 
   get "bookshelf" => "books#index", :as => :books
-  get "bookshelf/:slug" => "books#show", :as => :book
   get "bookshelf/quotes-and-motivations" => "books#quotes_and_motivations", :as => :quotes_and_motivations
+  get "bookshelf/:slug" => "books#show", :as => :book
   resources :books, :except => [:index, :show]
 
   get "travels" => "travels#index", :as => :travels

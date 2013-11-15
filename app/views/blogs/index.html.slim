@@ -19,7 +19,7 @@
             .post-content
               = link_to(truncate_html(strip_tags(post["body"]).html_safe, length: 150, omission: '...'), blog_path(post["slug"], post["id"]))
             .post-footer
-              = "#{minutes_to_read(strip_tags(post["body"]))} ⋅ #{blog_date(post["date"])}"
+              = render "blog_footer", :post => post
       .read-more
         - page = params[:page].to_i || 0
         .read-previous class="#{'hidden' if params[:page] == nil || params[:page].to_i == 0}"

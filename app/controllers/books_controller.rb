@@ -44,6 +44,7 @@ class BooksController < ApplicationController
   end
 
   def quotes_and_motivations
+    @next_book = Book.last
   end
 
   private
