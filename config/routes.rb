@@ -5,6 +5,7 @@ JustSayWen::Application.routes.draw do
   get "about/:section/:num" => "biographies#show", :as => :biography
 
   get "work" => "works#index", :as => :works
+  get "work/:slug" => "works#show", :as => :work
 
   get "photography" => "galleries#index", :as => :galleries
   get "/photography/:gallery/:flickr_set_id" => "galleries#show", :as => :gallery
