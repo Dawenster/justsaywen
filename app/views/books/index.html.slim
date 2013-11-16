@@ -22,8 +22,8 @@
           .main-header
             .header
               = year
-          - @books[year].each do |book|
-            .post-bucket
+          - @books[year].each_with_index do |book, i|
+            .post-bucket style="#{'border-bottom: none;' if i == @books.size - 1}"
               .post-title data-book-id="#{book.id}"
                 = link_to(book.title, book_path(book.to_slug))
               .post-content
@@ -34,7 +34,7 @@
         .main-header
           .header
             | Other
-          .post-bucket
+          .post-bucket style="border-bottom: none;"
             .post-title
               = link_to("Quotes and motivations", quotes_and_motivations_path)
             .post-content
