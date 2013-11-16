@@ -47,6 +47,15 @@
 
         .post-bucket
           .post-title
+            = link_to("Philanthropy", biography_path("philanthropy", 1))
+          .post-content
+            - content = "From a young age, I've been surrounded by amazing people who always give back to society.  I'm lucky to have had many opportunities to volunteer and help other people out, and in the process grow myself.  This section doesn't talk about the social enterprises that I have started - those can be found in the 'work' section."
+            = link_to(content, biography_path("philanthropy", 1))
+          .post-footer
+            | One section ⋅ 5 min read
+
+        .post-bucket
+          .post-title
             = link_to("Sports", biography_path("sports", 1))
           .post-content
             - content = "I find sports to be a great way to meet people and forge deeper bonds with existing friends.  It's like going to battle with someone, without the killing part.  There's the same intensity, struggle, comradery, and win-lose situation that I believe help shape a person's personality and outlook on life.  Play sports with someone and I'll bet you'll know them much better than a chat over coffee."

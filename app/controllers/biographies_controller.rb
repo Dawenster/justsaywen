@@ -21,8 +21,10 @@ class BiographiesController < ApplicationController
     end
   end
 
+  private
+
   def next_bio_section(current_section)
-    bio_sections = ["bio", "education", "media", "sports", "music", "other"]
+    bio_sections = ["bio", "education", "media", "philanthropy", "sports", "music", "other"]
     current_index = bio_sections.index(current_section)
     if current_index == bio_sections.size - 1
       return bio_sections[0]
