@@ -18,10 +18,20 @@
           .post-content
             | Since 2010, I've been tracking the books that I have read.  I love the feeling of a good read.  From when I was a kid biking to the library, to my daily routine of flipping through Wikipedia articles, I've always enjoyed learning something new.  Harry S. Truman once said, "Not all readers are leaders, but all leaders are readers."  If world leaders have the time to read, I should too.  I'm always open to book suggestions and I love to discuss the book with the recommender after!  Let me know!
       .main-bucket
+        .main-header
+          .header
+            | Aside from books
+        .post-bucket style="border-bottom: none;"
+          .post-title
+            = link_to("Quotes and motivations", quotes_and_motivations_path)
+          .post-content
+            - content = "\"People often say that motivation doesn't last. Neither does bathing - that's why we recommend it daily.\" - Zig Ziglar.  As per his advice, I often review these quotes to help keep me motivated, entertained, and inspired.  I mostly enjoy short quotes that include some sort of clever twist or logic, as opposed to long quotes that simply tell you stuff.  Would love to hear some of your favourite quotes!"
+            = link_to(content, quotes_and_motivations_path)
+      .main-bucket
         - @books.keys.each do |year|
           .main-header
             .header
-              = year
+              = "#{year} books"
           - @books[year].each_with_index do |book, i|
             .post-bucket style="#{'border-bottom: none;' if i == @books.size - 1}"
               .post-title data-book-id="#{book.id}"
@@ -30,13 +40,3 @@
                 = link_to(truncate_html(book.review.html_safe, length: 150, omission: '...'), book_path(book.title))
               .post-footer
                 = render "book_footer", :book => book
-      .main-bucket
-        .main-header
-          .header
-            | Other
-          .post-bucket style="border-bottom: none;"
-            .post-title
-              = link_to("Quotes and motivations", quotes_and_motivations_path)
-            .post-content
-              - content = "\"People often say that motivation doesn't last. Neither does bathing - that's why we recommend it daily.\" - Zig Ziglar.  As per his advice, I often review these quotes to help keep me motivated, entertained, and inspired.  I mostly enjoy short quotes that include some sort of clever twist or logic, as opposed to long quotes that simply tell you stuff.  Would love to hear some of your favourite quotes!"
-              = link_to(content, quotes_and_motivations_path)
