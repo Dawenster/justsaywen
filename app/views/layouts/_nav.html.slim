@@ -9,10 +9,6 @@
         i.fa.fa-lightbulb-o.fa-fw.fa-lg
         | Blog
     li
-      a href="#{biographies_path}" class="#{'active' if params[:controller] == 'biographies'}"
-        i.fa.fa-user.fa-fw.fa-lg
-        | About me
-    li
       a href="#{works_path}" class="#{'active' if params[:controller] == 'works'}"
         i.fa.fa-briefcase.fa-fw.fa-lg
         | Work
@@ -32,6 +28,10 @@
       a href="#{creative_writings_path}" class="#{'active' if params[:controller] == 'creative_writings'}"
         i.fa.fa-pencil.fa-fw.fa-lg
         | Creative writing
+    li
+      a href="#{biographies_path}" class="#{'active' if params[:controller] == 'biographies'}"
+        i.fa.fa-user.fa-fw.fa-lg
+        | About me
 
   .social-links
     a href="https://www.facebook.com/dstwen"
