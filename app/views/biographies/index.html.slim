@@ -8,3 +8,66 @@
     = render "layouts/menu_title"
   .col-md-8.movable-by-menu
     .right-content
+      .main-bucket
+        .main-header
+          .header
+            | My story
+
+        .post-bucket
+          .post-title
+            = link_to("Way back Wen", biography_path("bio", 1))
+          .post-content
+            - content = "A story of David Shang Ting Wen from birth until age 19.  I should also note that it’s a highly condensed version.  This is an exercise I would recommend to everyone - reflect back on a certain period of your life after a while, commit it to writing, and be as succinct as possible.  I have split the stages of my early life into categories.  The categories are named according to something particular that happened to me during that age period."
+            = link_to(content, biography_path("bio", 1))
+          .post-footer
+            | Seven sections ⋅ About a half hour read
+
+        .post-bucket
+          .post-title
+            = link_to("Education", biography_path("education", 1))
+          .post-content
+            - content = "I've been lucky enough to enjoy school for more than just the academics.  They have been positive environments for me to make friends and expand my horizons.  I've met many great teachers, professors, coaches, and mentors that I still keep in touch with to this day."
+            = link_to(content, biography_path("education", 1))
+          .post-footer
+            | Four sections ⋅ 10 min read
+
+        .post-bucket
+          .post-title
+            = link_to("Media", biography_path("media", 1))
+          .post-content
+            - content = "This is a collection of the various times I have been mentioned in the media.  No front-page New York Times article yet, but I got to start somewhere!"
+            = link_to(content, biography_path("media", 1))
+          .post-footer
+            | One section ⋅ 2 min read (unless you read all the links, then it may take an hour)
+
+      .main-bucket
+        .main-header
+          .header
+            | Aside from work
+
+        .post-bucket
+          .post-title
+            = link_to("Sports", biography_path("sports", 1))
+          .post-content
+            - content = "I find sports to be a great way to meet people and forge deeper bonds with existing friends.  It's like going to battle with someone, without the killing part.  There's the same intensity, struggle, comradery, and win-lose situation that I believe help shape a person's personality and outlook on life.  Play sports with someone and I'll bet you'll know them much better than a chat over coffee."
+            = link_to(content, biography_path("sports", 1))
+          .post-footer
+            | One section ⋅ 5 min read
+
+        .post-bucket
+          .post-title
+            = link_to("Music", biography_path("music", 1))
+          .post-content
+            - content = "Since the age of 7 I've always had music in my life (not counting my mom singing around the house).  From solo performances to small ensembles to large orchestras, I believe music has taught me much about practice, teamwork, and communication.  It was also one of my first love-hate relationships, and by that I mean it grew from love to hate to love again."
+            = link_to(content, biography_path("music", 1))
+          .post-footer
+            | One section ⋅ 5 min read
+
+        .post-bucket
+          .post-title
+            = link_to("Other hobbies", biography_path("other", 1))
+          .post-content
+            - content = "In addition to photography, reading, travel, and writing (all of which have their own sections on this site), I also enjoy a few other things here and there.  I'm open to new things so don't be shy about inviting me along!"
+            = link_to(content, biography_path("other", 1))
+          .post-footer
+            | One section ⋅ 5 min read

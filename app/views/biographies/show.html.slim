@@ -7,30 +7,27 @@
       .about-me-side
         = render "layouts/about_me_tidbit"
       .detail-image
-        = image_tag("#{@post["first_image"]}", :width => "100%")
+        = image_tag("#{@bio["first_image"]}", :width => "100%")
       .detail-content-holder
         .post-footer
-          = render "blog_footer", :post => @post
+          = render "bio_footer", :bio => @bio
         .detail-title
-          = @post["title"].html_safe
+          = @bio["title"].html_safe
         .detail-content
-          - if params[:tumblr_id] == "old"
-            = @post["body"].html_safe
-          - else
-            = remove_first_image(@post["body"]).html_safe
+          = remove_first_image(@bio["body"]).html_safe
         .about-me-bottom
           = render "layouts/about_me_tidbit"
-    - if @next_post
-      .next-article data-next-article-url="#{blog_path(@next_post["slug"], @next_post["id"])}"
+    - if @next_bio
+      .next-article data-next-article-url="#{biography_path(@section, @num)}"
         .next-article-bucket
           .next-article-read-next
             | Read next
           .detail-title
-            = @next_post["title"].html_safe
+            = @next_bio["title"].html_safe
           .detail-content
-            = truncate_html(strip_tags(@next_post["body"]).html_safe, length: 150, omission: '...')
+            = truncate_html(strip_tags(@next_bio["body"]).html_safe, length: 150, omission: '...')
           .post-footer
-            = render "blog_footer", :post => @next_post
+            = render "bio_footer", :bio => @next_bio
 
 javascript:
   $(".next-article").click(function() {

@@ -2,6 +2,7 @@ JustSayWen::Application.routes.draw do
   root "pages#index"
 
   get "about" => "biographies#index", :as => :biographies
+  get "about/:section/:num" => "biographies#show", :as => :biography
 
   get "work" => "works#index", :as => :works
 
