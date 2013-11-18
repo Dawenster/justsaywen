@@ -12,11 +12,16 @@
         - @sets.each do |set|
           - info = flickr.photos.getInfo(:photo_id => set["primary"])
           .grid-item style="background-image:url(#{FlickRaw.url(info)})" data-url="#{gallery_path(set["title"], set["id"])}"
-            .dark-overlay
+            .dark-overlay data-url="#{gallery_path(set["title"], set["id"])}"
             .grid-title
-              = link_to(set["title"], gallery_path(set["title"], set["id"]))
+              = link_to(set["title"], gallery_path(set["title"], set["id"]), :class => "gallery-link")
 
 javascript:
   $(".grid-item").click(function(e) {
     window.location = e.target.attributes[1].value;
+  });
+
+  $(".gallery-link").click(function(e) {
+    e.preventDefault();
+    window.location = e.target.href;
   });
