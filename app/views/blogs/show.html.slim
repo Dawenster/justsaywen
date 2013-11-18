@@ -31,8 +31,3 @@
             = truncate_html(strip_tags(@next_post["body"]).html_safe, length: 150, omission: '...')
           .post-footer
             = render "blog_footer", :post => @next_post
-
-javascript:
-  $(".next-article").click(function() {
-    window.location = $(".next-article").attr("data-next-article-url");
-  });

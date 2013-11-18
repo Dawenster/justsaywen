@@ -27,8 +27,3 @@
           = truncate_html(strip_tags(@next_book.review).html_safe, length: 150, omission: '...')
         .post-footer
           = render "book_footer", :book => @next_book
-
-javascript:
-  $(".next-article").click(function() {
-    window.location = $(".next-article").attr("data-next-article-url");
-  });
