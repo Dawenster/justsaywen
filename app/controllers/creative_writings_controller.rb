@@ -6,7 +6,6 @@ class CreativeWritingsController < ApplicationController
   def show
     client = Tumblr::Client.new
     @creative_writing = client.posts("justsaywen.tumblr.com", :tag => params[:slug])["posts"][0]
-    @creative_writing["first_image"] = find_first_image(@creative_writing["body"])
     @next_creative_writing = client.posts("justsaywen.tumblr.com", :filter => "text", :tag => next_creative_writing(params[:slug]))["posts"].last
   end
 
@@ -14,16 +13,16 @@ class CreativeWritingsController < ApplicationController
 
   def next_creative_writing(current_creative_writing)
     creative_writings = [
-      "the-blank-walls",
-      "imperfect-cadence",
+      "sonshine",
       "chat",
       "dream-team",
+      "imperfect-cadence",
+      "the-blank-walls",
       "red-handed",
-      "sonshine",
-      "fly-ing-around",
-      "lock-step",
+      "silhouette",
       "wishing-well",
-      "silhouette"
+      "fly-ing-around",
+      "lock-step"
     ]
     current_index = creative_writings.index(current_creative_writing)
     if current_index == creative_writings.size - 1

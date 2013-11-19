@@ -6,5 +6,5 @@ ENV['BACKGROUND_IMAGES'] = {
   "galleries" => { "url" => "https://s3-us-west-2.amazonaws.com/justsaywen/david_wen_photography.jpg", "position" => "center" },
   "books" => { "url" => "https://s3-us-west-2.amazonaws.com/justsaywen/david_wen_bookshelf.jpg", "position" => "bottom" },
   "travels" => { "url" => "https://s3-us-west-2.amazonaws.com/justsaywen/david_wen_travels.jpg", "position" => "center" },
-  "creative_writings" => { "url" => "https://s3-us-west-2.amazonaws.com/justsaywen/david_wen_about.jpg", "position" => "center" }
+  "creative_writings" => { "url" => "https://s3-us-west-2.amazonaws.com/justsaywen/david_wen_creative_writing.jpg", "position" => "right" }
 }.to_s

@@ -24,23 +24,14 @@
           .header
             | Short stories
 
-        .post-bucket
+        .post-bucket style="border-bottom: none;"
           .post-title
-            = link_to("The Blank Walls", creative_writing_path("the-blank-walls"))
+            = link_to("Sonshine", creative_writing_path("sonshine"))
           .post-content
-            - content = "Inspired by my volunteer trip to Jinotepe, Nicaragua.  It talks about what things are permanent and what things are not and touches on how some of us have come to perceive volunteering."
-            = link_to(content, creative_writing_path("the-blank-walls"))
+            - content = "An old man is seen throwing coins off a pier… written back in high school."
+            = link_to(content, creative_writing_path("sonshine"))
           .post-footer
-            | Current ⋅ 2 min read
-
-        .post-bucket
-          .post-title
-            = link_to("Imperfect Cadence", creative_writing_path("imperfect-cadence"))
-          .post-content
-            - content = "A dysfunctional orchestra attempts to win a competition – a story with many different perspectives telling the \“same story\”."
-            = link_to(content, creative_writing_path("imperfect-cadence"))
-          .post-footer
-            | Current ⋅ 2 min read
+            | 13 min read
 
         .post-bucket
           .post-title
@@ -49,7 +40,7 @@
             - content = "A caller calls into a telephone crisis center."
             = link_to(content, creative_writing_path("chat"))
           .post-footer
-            | Side project ⋅ 2 min read
+            | 9 min read
 
         .post-bucket
           .post-title
@@ -58,7 +49,25 @@
             - content = "For those who may have played baseball as a child (like I have).  Written from the perspective of a child."
             = link_to(content, creative_writing_path("dream-team"))
           .post-footer
-            | 2007 - 2009 ⋅ 3 min read
+            | 12 min read
+
+        .post-bucket
+          .post-title
+            = link_to("Imperfect Cadence", creative_writing_path("imperfect-cadence"))
+          .post-content
+            - content = "A dysfunctional orchestra attempts to win a competition – a story with many different perspectives telling the \“same story\”."
+            = link_to(content, creative_writing_path("imperfect-cadence"))
+          .post-footer
+            | 10 min read
+
+        .post-bucket
+          .post-title
+            = link_to("The Blank Walls", creative_writing_path("the-blank-walls"))
+          .post-content
+            - content = "Inspired by my volunteer trip to Jinotepe, Nicaragua.  It talks about what things are permanent and what things are not and touches on how some of us have come to perceive volunteering."
+            = link_to(content, creative_writing_path("the-blank-walls"))
+          .post-footer
+            | 7 min read
 
         .post-bucket
           .post-title
@@ -67,48 +76,13 @@
             - content = "Inspired by House and Sherlock Holmes – a cab driver picks up a man in the wee hours of dawn."
             = link_to(content, creative_writing_path("red-handed"))
           .post-footer
-            | 2005 - 2006 ⋅ 4 min read
+            | 9 min read
 
-        .post-bucket style="border-bottom: none;"
-          .post-title
-            = link_to("Sonshine", creative_writing_path("sonshine"))
-          .post-content
-            - content = "An old man is seen throwing coins off a pier… written back in high school."
-            = link_to(content, creative_writing_path("sonshine"))
-          .post-footer
-            | 2001 - 2005 ⋅ 4 min read
 
       .main-bucket
         .main-header
           .header
             | Poems
-
-        .post-bucket
-          .post-title
-            = link_to("Fly-ing Around", creative_writing_path("fly-ing-around"))
-          .post-content
-            - content = "If you enjoy toilet humour."
-            = link_to(content, creative_writing_path("fly-ing-around"))
-          .post-footer
-            | 2013 ⋅ 2 min read
-
-        .post-bucket
-          .post-title
-            = link_to("Lock Step", creative_writing_path("lock-step"))
-          .post-content
-            - content = "Regarding an illegal experience I had while travelling."
-            = link_to(content, creative_writing_path("lock-step"))
-          .post-footer
-            | 2013 ⋅ 2 min read
-
-        .post-bucket
-          .post-title
-            = link_to("Wishing Well", creative_writing_path("wishing-well"))
-          .post-content
-            - content = "We all need one from time to time…"
-            = link_to(content, creative_writing_path("wishing-well"))
-          .post-footer
-            | 2012 ⋅ 4 min read
 
         .post-bucket style="border-bottom: none;"
           .post-title
@@ -117,4 +91,32 @@
             - content = "About two soldiers caught in a stand-off."
             = link_to(content, creative_writing_path("silhouette"))
           .post-footer
-            | 2010 - 2012 ⋅ 2 min read
+            | 2 min read
+            
+        .post-bucket
+          .post-title
+            = link_to("Wishing Well", creative_writing_path("wishing-well"))
+          .post-content
+            - content = "We all need one from time to time…"
+            = link_to(content, creative_writing_path("wishing-well"))
+          .post-footer
+            | 1 min read
+
+        .post-bucket
+          .post-title
+            = link_to("Fly-ing Around", creative_writing_path("fly-ing-around"))
+          .post-content
+            - content = "If you enjoy toilet humour."
+            = link_to(content, creative_writing_path("fly-ing-around"))
+          .post-footer
+            | 2 min read
+
+        .post-bucket
+          .post-title
+            = link_to("Lock Step", creative_writing_path("lock-step"))
+          .post-content
+            - content = "Regarding an illegal experience I had while travelling."
+            = link_to(content, creative_writing_path("lock-step"))
+          .post-footer
+            | 2 min read
+

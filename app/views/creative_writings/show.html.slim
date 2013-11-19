@@ -6,8 +6,7 @@
     .detail-bucket
       .about-me-side
         = render "layouts/about_me_tidbit"
-      .detail-image
-        = image_tag("#{@creative_writing["first_image"]}", :width => "100%")
+      .creative-writing-buffer
       .detail-content-holder
         .post-footer
           = render "creative_writing_footer", :creative_writing => @creative_writing
@@ -18,7 +17,7 @@
         .about-me-bottom
           = render "layouts/about_me_tidbit"
     - if @next_creative_writing
-      .next-article data-next-article-url="#{work_path(@next_creative_writing['slug'])}"
+      .next-article data-next-article-url="#{creative_writing_path(@next_creative_writing['slug'])}"
         .next-article-bucket
           .next-article-read-next
             | Read next
