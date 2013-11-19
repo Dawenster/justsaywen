@@ -20,7 +20,7 @@ class BlogsController < ApplicationController
 
   def show
     client = Tumblr::Client.new
-    @post = client.posts("dawenster.tumblr.com", :id => params[:tumblr_id])["posts"][0]
+    @post = client.posts("dawenster.tumblr.com", :tag => params[:slug])["posts"][0]
     @post["first_image"] = find_first_image(@post["body"])
     current_tag = find_tag_number(@post["tags"])
     if current_tag == 1

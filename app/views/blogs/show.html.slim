@@ -14,14 +14,14 @@
         .detail-title
           = @post["title"].html_safe
         .detail-content
-          - if params[:tumblr_id] == "old"
-            = @post["body"].html_safe
-          - else
-            = remove_first_image(@post["body"]).html_safe
+          / - if params[:tumblr_id] == "old"
+          /   = @post["body"].html_safe
+          / - else
+          = remove_first_image(@post["body"]).html_safe
         .about-me-bottom
           = render "layouts/about_me_tidbit"
     - if @next_post
-      .next-article data-next-article-url="#{blog_path(@next_post["slug"], @next_post["id"])}"
+      .next-article data-next-article-url="#{blog_path(@next_post["slug"])}"
         .next-article-bucket
           .next-article-read-next
             | Read next

@@ -21,6 +21,6 @@ JustSayWen::Application.routes.draw do
   get "creative_writing/:slug" => "creative_writings#show", :as => :creative_writing
 
   get "blog" => "blogs#index", :as => :blogs
-  get "/:slug/:tumblr_id" => "blogs#show", :as => :blog
-  get "/:slug" => "redirects#blog"
+  get "/:slug" => "blogs#show", :as => :blog
+  # get "/:slug" => "redirects#blog"
 end
