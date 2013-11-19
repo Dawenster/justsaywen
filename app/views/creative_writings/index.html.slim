@@ -8,3 +8,113 @@
     = render "layouts/menu_title"
   .col-md-8.movable-by-menu
     .right-content
+      .main-bucket
+        .main-header
+          .header
+            | Introduction
+
+        .post-bucket style="border-bottom: none;"
+          .post-title
+            | My creative writings
+          .post-content
+            | I really took an interest in writing due to my grade 7 teacher, Mr. Geiger.  He really pushed us to write a paragraph every day, and present it in front of the class.  He got the class to evaluate how good you were, so the incentive was to be as interesting as possible.  Since then, I’ve joined and won various prose and poetry competitions and have kept up the writing to date.  Below are some of my creative writing works (that I want to show).
+
+      .main-bucket
+        .main-header
+          .header
+            | Short stories
+
+        .post-bucket
+          .post-title
+            = link_to("The Blank Walls", creative_writing_path("the-blank-walls"))
+          .post-content
+            - content = "Inspired by my volunteer trip to Jinotepe, Nicaragua.  It talks about what things are permanent and what things are not and touches on how some of us have come to perceive volunteering."
+            = link_to(content, creative_writing_path("the-blank-walls"))
+          .post-footer
+            | Current ⋅ 2 min read
+
+        .post-bucket
+          .post-title
+            = link_to("Imperfect Cadence", creative_writing_path("imperfect-cadence"))
+          .post-content
+            - content = "A dysfunctional orchestra attempts to win a competition – a story with many different perspectives telling the \“same story\”."
+            = link_to(content, creative_writing_path("imperfect-cadence"))
+          .post-footer
+            | Current ⋅ 2 min read
+
+        .post-bucket
+          .post-title
+            = link_to("Chat", creative_writing_path("chat"))
+          .post-content
+            - content = "A caller calls into a telephone crisis center."
+            = link_to(content, creative_writing_path("chat"))
+          .post-footer
+            | Side project ⋅ 2 min read
+
+        .post-bucket
+          .post-title
+            = link_to("Dream Team", creative_writing_path("dream-team"))
+          .post-content
+            - content = "For those who may have played baseball as a child (like I have).  Written from the perspective of a child."
+            = link_to(content, creative_writing_path("dream-team"))
+          .post-footer
+            | 2007 - 2009 ⋅ 3 min read
+
+        .post-bucket
+          .post-title
+            = link_to("Red Handed", creative_writing_path("red-handed"))
+          .post-content
+            - content = "Inspired by House and Sherlock Holmes – a cab driver picks up a man in the wee hours of dawn."
+            = link_to(content, creative_writing_path("red-handed"))
+          .post-footer
+            | 2005 - 2006 ⋅ 4 min read
+
+        .post-bucket style="border-bottom: none;"
+          .post-title
+            = link_to("Sonshine", creative_writing_path("sonshine"))
+          .post-content
+            - content = "An old man is seen throwing coins off a pier… written back in high school."
+            = link_to(content, creative_writing_path("sonshine"))
+          .post-footer
+            | 2001 - 2005 ⋅ 4 min read
+
+      .main-bucket
+        .main-header
+          .header
+            | Poems
+
+        .post-bucket
+          .post-title
+            = link_to("Fly-ing Around", creative_writing_path("fly-ing-around"))
+          .post-content
+            - content = "If you enjoy toilet humour."
+            = link_to(content, creative_writing_path("fly-ing-around"))
+          .post-footer
+            | 2013 ⋅ 2 min read
+
+        .post-bucket
+          .post-title
+            = link_to("Lock Step", creative_writing_path("lock-step"))
+          .post-content
+            - content = "Regarding an illegal experience I had while travelling."
+            = link_to(content, creative_writing_path("lock-step"))
+          .post-footer
+            | 2013 ⋅ 2 min read
+
+        .post-bucket
+          .post-title
+            = link_to("Wishing Well", creative_writing_path("wishing-well"))
+          .post-content
+            - content = "We all need one from time to time…"
+            = link_to(content, creative_writing_path("wishing-well"))
+          .post-footer
+            | 2012 ⋅ 4 min read
+
+        .post-bucket style="border-bottom: none;"
+          .post-title
+            = link_to("Silhouette", creative_writing_path("silhouette"))
+          .post-content
+            - content = "About two soldiers caught in a stand-off."
+            = link_to(content, creative_writing_path("silhouette"))
+          .post-footer
+            | 2010 - 2012 ⋅ 2 min read

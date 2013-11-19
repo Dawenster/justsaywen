@@ -13,7 +13,19 @@ class WorksController < ApplicationController
   private
 
   def next_work(current_work)
-    works = ["time-auction", "to-tablets", "fly-shortcut", "sola-caritas", "college-pro-painters", "iya", "axiom-zen", "legal-reach", "kpmg", "secor", "rl-solutions"]
+    works = [
+      "time-auction",
+      "to-tablets",
+      "fly-shortcut",
+      "sola-caritas",
+      "college-pro-painters",
+      "iya",
+      "axiom-zen",
+      "legal-reach",
+      "kpmg",
+      "secor",
+      "rl-solutions"
+    ]
     current_index = works.index(current_work)
     if current_index == works.size - 1
       return works[0]

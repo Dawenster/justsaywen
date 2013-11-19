@@ -1,0 +1,30 @@
+= render "layouts/menu_logo"
+.site-nav-overlay.clickable.hidden
+.row
+  = render "layouts/nav"
+  .detail-wrapper.movable-by-menu
+    .detail-bucket
+      .about-me-side
+        = render "layouts/about_me_tidbit"
+      .detail-image
+        = image_tag("#{@creative_writing["first_image"]}", :width => "100%")
+      .detail-content-holder
+        .post-footer
+          = render "creative_writing_footer", :creative_writing => @creative_writing
+        .detail-title
+          = @creative_writing["title"].html_safe
+        .detail-content
+          = remove_first_image(@creative_writing["body"]).html_safe
+        .about-me-bottom
+          = render "layouts/about_me_tidbit"
+    - if @next_creative_writing
+      .next-article data-next-article-url="#{work_path(@next_creative_writing['slug'])}"
+        .next-article-bucket
+          .next-article-read-next
+            | Read next
+          .detail-title
+            = @next_creative_writing["title"].html_safe
+          .detail-content
+            = truncate_html(strip_tags(@next_creative_writing["body"]).html_safe, length: 150, omission: '...')
+          .post-footer
+            = render "creative_writing_footer", :creative_writing => @next_creative_writing
