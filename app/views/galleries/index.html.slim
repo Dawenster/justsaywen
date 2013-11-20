@@ -18,7 +18,8 @@
 
 javascript:
   $(".grid-item").click(function(e) {
-    window.location = e.target.attributes[1].value;
+    var target = $(e.target);
+    window.location = target.attr("data-url");
   });
 
   $(".gallery-link").click(function(e) {
