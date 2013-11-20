@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery
 //= require jquery.turbolinks
 //= require turbolinks
 //= require galleria-1.3.2.min
