@@ -18,7 +18,7 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find_by_slug(params[:slug])
-    all_books = Book.all
+    all_books = Book.order("created_at DESC")
     all_books.each_with_index do |book, i|
       next unless @book == book
       if i == all_books.size - 1
