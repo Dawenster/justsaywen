@@ -1,4 +1,6 @@
 class BooksController < ApplicationController
+  http_basic_authenticate_with :name => ENV['ADMIN_USERNAME'], :password => ENV['ADMIN_PASSWORD'], :except => [:index, :show, :quotes_and_motivations]
+
   def index
     @background = eval(ENV['BACKGROUND_IMAGES'])[params[:controller]]
     years = []
