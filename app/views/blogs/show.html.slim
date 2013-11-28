@@ -7,16 +7,13 @@
       .about-me-side
         = render "layouts/about_me_tidbit"
       .detail-image
-        = image_tag("#{@post["first_image"]}", :width => "100%")
+        = image_tag("#{@post["first_image"]}", :width => "100%") unless @post["first_image"].nil?
       .detail-content-holder
         .post-footer
           = render "blog_footer", :post => @post
         .detail-title
           = @post["title"].html_safe
         .detail-content
-          / - if params[:tumblr_id] == "old"
-          /   = @post["body"].html_safe
-          / - else
           = remove_first_image(@post["body"]).html_safe
         .about-me-bottom
           = render "layouts/about_me_tidbit"

@@ -18,5 +18,6 @@ class ApplicationController < ActionController::Base
         return str.match(regex)[0]
       end
     end
+    nil
   end
 end
