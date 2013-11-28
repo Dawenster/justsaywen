@@ -11,7 +11,7 @@ class BlogsController < ApplicationController
       @posts += old_posts
     elsif post_count == 0
       total_posts = new_posts["total_posts"]
-      already_shown = total_posts % 20
+      already_shown = 20 - (total_posts % 20)
       old_posts = client.posts("dawenster.tumblr.com", :filter => "text", :tag => "old", :offset => already_shown)["posts"]
       @posts += old_posts
     end
