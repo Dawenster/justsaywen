@@ -26,7 +26,7 @@ class BooksController < ApplicationController
     all_books.each_with_index do |book, i|
       next unless @book == book
       if i == all_books.size - 1
-        @next_book = Book.first
+        @next_book = all_books.first
       else
         @next_book = all_books[i + 1]
       end
