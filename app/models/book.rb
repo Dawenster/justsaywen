@@ -2,7 +2,7 @@ class Book < ActiveRecord::Base
   before_save :create_slug
 
   def create_slug
-    self.slug = self.to_slug if self.title.parameterize
+    self.slug = self.to_slug unless self.title.parameterize.blank?
   end
 
   def to_slug
