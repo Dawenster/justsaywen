@@ -40,4 +40,4 @@
         | Submit
 
   - if @book.id
-    = button_to("Delete", { :id => @book.id, :action => :destroy }, :method => :delete, :class => "btn btn-warning"), :confirm => "Dude!  You sure you wanna delete this?!"
+    = button_to("Delete", { :id => @book.id, :action => :destroy }, :method => :delete, :class => "btn btn-warning", :confirm => "Dude!  You sure you wanna delete this?!")
