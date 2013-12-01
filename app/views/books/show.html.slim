@@ -17,7 +17,7 @@
           = @book.review.html_safe
         .about-me-bottom
           = render "layouts/about_me_tidbit"
-    .next-article data-next-article-url="#{book_path(@next_book.to_slug)}"
+    .next-article data-next-article-url="#{book_path(@next_book.slug)}"
       .next-article-bucket
         .next-article-read-next
           | Read next
