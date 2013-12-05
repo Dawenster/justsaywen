@@ -19,4 +19,13 @@ module ApplicationHelper
     date = Date.strptime(str, "%Y-%m-%d %H:%M:%S %z")
     return date.strftime("%b %d, %Y")
   end
+
+  def generate_meta_tags(section, title, image, description)
+    full_title = "#{title + ' | ' unless title.blank?}#{section} | David Wen ⋅ Just Say Wen ⋅ 溫上霆"
+    meta :title => full_title, :description => "#{description}"
+    meta [:property => "og:image", :content => "#{image}"]
+    meta [:property => "og:title", :content => "#{full_title}"]
+    meta [:property => "og:url", :content => "#{request.original_url}"]
+    meta [:property => "og:description", :content => "#{description}"]
+  end
 end
