@@ -24,7 +24,7 @@ module ApplicationHelper
     full_title = "#{title + ' | ' unless title.blank?}#{section} | David Wen ⋅ Just Say Wen ⋅ 溫上霆"
     meta :title => full_title, :description => "#{description}"
     meta [:property => "og:image", :content => "#{image}"]
-    meta [:property => "og:title", :content => "#{full_title}"]
+    meta [:property => "og:title", :content => "#{full_title}"] unless image.blank?
     meta [:property => "og:url", :content => "#{request.original_url}"]
     meta [:property => "og:description", :content => "#{description}"]
   end
