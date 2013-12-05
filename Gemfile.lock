@@ -68,8 +68,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    meta-tags (1.5.0)
-      actionpack
+    metamagic (2.0.6)
+      rails (>= 3.0.0)
     method_source (0.8.1)
     mime-types (1.25)
     mini_portile (0.5.1)
@@ -166,7 +166,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks
-  meta-tags
+  metamagic
   newrelic_rpm
   nokogiri
   pg
