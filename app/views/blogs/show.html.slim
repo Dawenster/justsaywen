@@ -1,3 +1,4 @@
+- generate_meta_tags("Blog", @post["title"], @post["first_image"], truncate_html(strip_tags(@post["body"]), length: 250))
 = render "layouts/menu_logo"
 .site-nav-overlay.clickable.hidden
 .row
