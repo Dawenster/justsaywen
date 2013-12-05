@@ -1,3 +1,5 @@
+- info = flickr.photos.getInfo(:photo_id => @current_set["primary"])
+- generate_meta_tags("Photography", params[:gallery], FlickRaw.url(info), "Photos taken in #{params[:gallery]}")
 = render "picture_menu"
 = render "layouts/menu_logo"
 .site-nav-overlay.clickable.hidden
