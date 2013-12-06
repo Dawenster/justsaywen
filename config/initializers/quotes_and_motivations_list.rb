@@ -7,6 +7,7 @@ ENV['QUOTES_MOTIVATIONS'] = {
   "Martin Luther King didn't say \"I have a nightmare\"" => "Not sure...",
   "You can't solve a problem with the same thinking that created it" => "Albert Einstein",
   "You can curse that roses have thorns or rejoice that thorns have roses" => "Abraham Lincoln",
+  "I learned that courage was not the absence of fear, but the triumph over it. The brave man is not he who does not feel afraid, but he who conquers that fear." => "Nelson Mandela",
   "Life is not about finding yourself - it's about creating yourself" => "George Bernard Shaw",
   "Remember that failure is an event, not a person" => "Zig Ziglar",
   "If there is no price to be paid, it is also of no value" => "Albert Einstein",
