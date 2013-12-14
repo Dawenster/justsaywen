@@ -21,11 +21,13 @@ module ApplicationHelper
   end
 
   def generate_meta_tags(section, title, image, description)
-    full_title = "#{title + ' ⋅ ' unless title.blank?}#{section} ⋅ JustSayWen.com"
-    meta :title => full_title, :description => "#{minutes_to_read(description)} ⋅ #{description}"
-    meta [:property => "og:image", :content => "#{image}"]
-    meta [:property => "og:title", :content => "#{full_title}"] unless image.blank?
-    meta [:property => "og:url", :content => "#{request.original_url}"]
-    meta [:property => "og:description", :content => "#{description}"]
+    full_title = "#{title ? title : section} - by David Wen"
+    full_description = "#{minutes_to_read(description)} ⋅ #{description}"
+
+    meta :title => full_title, :description => full_description
+    meta [:property => "og:image", :content => image] unless image.blank?
+    meta [:property => "og:title", :content => full_title}]
+    meta [:property => "og:url", :content => request.original_url]
+    meta [:property => "og:description", :content => full_description]
   end
 end
