@@ -26,7 +26,7 @@ module ApplicationHelper
 
     meta :title => full_title, :description => full_description
     meta [:property => "og:image", :content => image] unless image.blank?
-    meta [:property => "og:title", :content => full_title}]
+    meta [:property => "og:title", :content => full_title]
     meta [:property => "og:url", :content => request.original_url]
     meta [:property => "og:description", :content => full_description]
   end
