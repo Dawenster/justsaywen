@@ -29,8 +29,8 @@ module ApplicationHelper
     meta [:property => "og:title", :content => full_title]
     meta [:property => "og:url", :content => request.original_url]
     meta [:property => "og:description", :content => full_description]
-    meta [:property => "og:type" :content => "article"]
-    meta [:property => "article:publisher" :content => "http://www.justsaywen.com"]
-    meta [:property => "article:author" :content => "http://www.justsaywen.com/blog"]
+    meta [:property => "og:type", :content => "article"]
+    meta [:property => "article:publisher", :content => "http://www.justsaywen.com"]
+    meta [:property => "article:author", :content => "http://www.justsaywen.com/blog"]
   end
 end
