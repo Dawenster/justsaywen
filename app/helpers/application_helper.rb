@@ -21,8 +21,8 @@ module ApplicationHelper
   end
 
   def generate_meta_tags(section, title, image, description)
-    full_title = "#{title + ' | ' unless title.blank?}#{section} | David Wen ⋅ Just Say Wen ⋅ 溫上霆"
-    meta :title => full_title, :description => "#{description}"
+    full_title = "#{title + ' ⋅ ' unless title.blank?}#{section} ⋅ JustSayWen.com"
+    meta :title => full_title, :description => "#{minutes_to_read(description)} ⋅ #{description}"
     meta [:property => "og:image", :content => "#{image}"]
     meta [:property => "og:title", :content => "#{full_title}"] unless image.blank?
     meta [:property => "og:url", :content => "#{request.original_url}"]
