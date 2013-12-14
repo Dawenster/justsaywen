@@ -22,7 +22,7 @@ module ApplicationHelper
 
   def generate_meta_tags(section, title, image, description)
     full_title = "#{title ? title : section} - by David Wen"
-    full_description = "#{minutes_to_read(description)} ⋅ #{description}"
+    full_description = "#{minutes_to_read(description) + ' ⋅ ' if title}#{truncate_html(description, length: 250)}"
 
     meta :title => full_title, :description => full_description
     meta [:property => "og:image", :content => image] unless image.blank?
