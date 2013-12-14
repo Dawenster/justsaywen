@@ -11,7 +11,11 @@ class ApplicationController < ActionController::Base
       /http:\/\/media.tumblr.com.*.png\b/,
       /http:\/\/media.tumblr.com.*.jpeg\b/,
       /http:\/\/media.tumblr.com.*.gif\b/,
-      /http:\/\/i.imgur.com.*.gif\b/
+      /http:\/\/i.imgur.com.*.gif\b/,
+      /https:\/\/\d+.media.tumblr.com.*.jpg\b/,
+      /https:\/\/\d+.media.tumblr.com.*.png\b/,
+      /https:\/\/\d+.media.tumblr.com.*.jpeg\b/,
+      /https:\/\/\d+.media.tumblr.com.*.gif\b/
     ]
     regexes.each do |regex|
       if str.match regex
