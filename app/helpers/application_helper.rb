@@ -21,7 +21,7 @@ module ApplicationHelper
   end
 
   def generate_meta_tags(section, title, image, description)
-    full_title = "#{title ? title : section} - by David Wen"
+    full_title = "#{title.blank? ? section : title} - by David Wen"
     full_description = "#{minutes_to_read(description) + ' ⋅ ' if title}#{truncate_html(description, length: 250)}"
 
     meta :title => full_title, :description => full_description
