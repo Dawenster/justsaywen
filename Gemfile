@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'actionview-encoded_mail_to'
 gem 'coffee-rails', '~> 4.0.0'
-gem 'flickraw'
+gem 'flickraw', '~> 0.9.8'
 gem 'font-awesome-sass'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
