@@ -15,7 +15,7 @@
         .detail-title
           = @book.title.html_safe
         .detail-content
-          = @book.review.html_safe
+          = Rinku.auto_link(simple_format(@book.review)).html_safe
         .about-me-bottom
           = render "layouts/about_me_tidbit"
     .next-article data-next-article-url="#{book_path(@next_book.slug)}"
