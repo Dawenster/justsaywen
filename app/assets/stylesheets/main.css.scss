@@ -200,6 +200,11 @@ p {
     -ms-transition: color .1s linear;
     -o-transition: color .1s linear;
     transition: color .1s linear;
+
+    .rss-holder {
+      float: right;
+      cursor: pointer;
+    }
   }
 }
 
@@ -417,4 +422,8 @@ p {
 
 .read-next {
   float: right;
+}
+
+.email-subscribe-link-as-sentence {
+  cursor: pointer;
 }

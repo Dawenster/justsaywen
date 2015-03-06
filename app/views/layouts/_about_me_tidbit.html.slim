@@ -5,3 +5,4 @@
   .author-details
     - random_fact = ENV['RANDOM_FACTS'].split("|").sample.strip
     = "Entrepreneur, software engineer, ex management consultant.  #{random_fact}"
+    = render "layouts/subscribe_link_as_sentence"

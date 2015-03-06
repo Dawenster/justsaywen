@@ -13,6 +13,7 @@
         .main-header
           .header
             | Introduction
+            = render "layouts/subscribe_link"
         .post-bucket style="border-bottom: none;"
           .post-title
             | The things I read
@@ -36,6 +37,7 @@
           .main-header
             .header
               = "#{year} books"
+              = render "layouts/subscribe_link"
           - @books[year].each_with_index do |book, i|
             .post-bucket style="#{'border-bottom: none;' if i == @books.size - 1}"
               .post-title data-book-id="#{book.id}"

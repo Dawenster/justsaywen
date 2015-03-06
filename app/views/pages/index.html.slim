@@ -21,6 +21,7 @@
         .main-header
           .header
             | Latest blog posts
+            = render "layouts/subscribe_link"
         - @posts.each do |post|
           .post-bucket
             .post-title

@@ -13,6 +13,7 @@
         .main-header
           .header
             | All blog posts
+            = render "layouts/subscribe_link"
         - @posts.each_with_index do |post, i|
           .post-bucket style="#{'border-bottom: none;' if i == @posts.size - 1}"
             .post-title
