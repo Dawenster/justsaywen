@@ -15,6 +15,7 @@
           = @creative_writing["title"].html_safe
         .detail-content
           = remove_first_image(@creative_writing["body"]).html_safe
+        = render "layouts/subscribe_button"
         .about-me-bottom
           = render "layouts/about_me_tidbit"
     - if @next_creative_writing

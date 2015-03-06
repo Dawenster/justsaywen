@@ -16,6 +16,7 @@
           = @post["title"].html_safe
         .detail-content
           = remove_first_image(@post["body"]).html_safe
+        = render "layouts/subscribe_button"
         .about-me-bottom
           = render "layouts/about_me_tidbit"
     - if @next_post
