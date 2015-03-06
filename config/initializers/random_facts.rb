@@ -34,5 +34,8 @@ ENV['RANDOM_FACTS'] = <<-eos
   He wears the number 11 on sports teams.|
   He prefers appetizers to drinks.|
   He always does an extra pushup for his friend Andrew.|
-  He likes to type as if he's playing the piano dramatically.
+  He likes to type as if he's playing the piano dramatically.|
+  He once scaled down a level 5 mountain with no harness on (by accident).|
+  He keeps a ukulele by his desk, just in case.|
+  He collects business cards and makes them into flashcards for Korean vocab.
 eos
