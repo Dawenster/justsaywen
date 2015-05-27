@@ -36,6 +36,9 @@
           | Year
         = f.text_field :year, :value => @book.year, :class => "form-control", :placeholder => "Year"
 
+      .form-group
+        = f.input :reviewed, :value => @book.reviewed, :class => "form-control", :label => " Personally reviewed?"
+
       button.btn.btn-default type="submit"
         | Submit
 
