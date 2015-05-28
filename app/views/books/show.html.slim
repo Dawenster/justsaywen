@@ -14,6 +14,11 @@
           = render "book_footer", :book => @book
         .detail-title
           = @book.title.html_safe
+        br
+        - if @book.reviewed
+          .post-reviewed
+            i.fa.fa-bookmark
+            = " Reviewed by David Wen"
         .detail-content
           = Rinku.auto_link(simple_format(@book.review)).html_safe
         = render "layouts/subscribe_button"
