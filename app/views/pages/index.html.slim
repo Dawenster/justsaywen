@@ -22,8 +22,8 @@
           .header
             | Latest blog posts
             = render "layouts/subscribe_link"
-        - @posts.each do |post|
-          .post-bucket
+        - @posts.each_with_index do |post, i|
+          .post-bucket style="#{'border-bottom: none;' if i == @books.size - 1}"
             .post-title
               = link_to(post["title"], blog_path(post["slug"]))
             .post-content
