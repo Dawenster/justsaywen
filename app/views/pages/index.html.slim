@@ -27,7 +27,7 @@
             .post-title
               = link_to(post["title"], blog_path(post["slug"]))
             .post-content
-              = link_to(truncate_html(post["body"].html_safe, length: 150, omission: '...'), blog_path(post["slug"]))
+              = link_to(truncate_html(post["body"].html_safe.gsub("\n\n", " "), length: 150, omission: '...'), blog_path(post["slug"]))
             .post-footer
               = "#{minutes_to_read(post["body"])} ⋅ #{blog_date(post["date"])}"
       .read-next
