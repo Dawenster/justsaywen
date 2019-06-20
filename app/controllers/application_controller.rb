@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   helper_method :find_first_image
 
   def find_first_image(str)
-    regexes = [ 
+    regexes = [
       /http:\/\/media.tumblr.com.*.jpg\b/,
       /http:\/\/media.tumblr.com.*.png\b/,
       /http:\/\/media.tumblr.com.*.jpeg\b/,
@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
     ]
     regexes.each do |regex|
       if str.match regex
-        return str.match(regex)[0]
+        return str.match(regex)[0].split('src="').last
       end
     end
     nil
