@@ -21,6 +21,9 @@
                     span.asterisk
                       | *
                   input.required.email.form-control type="email" value="" name="EMAIL" id="mce-EMAIL"
+                  - if @trust_observer
+                    small.form-text.text-muted Privacy verified by Trust Observer
+                    i.fa.fa-info-circle#trust-observer style="margin-left: 5px;"
 
               .mc-field-group
                 .form-group
@@ -37,7 +40,7 @@
               .clear id="mce-responses"
                 .response id="mce-error-response" style="display:none"
                 .response id="mce-success-response" style="display:none"
-  
+
               div style="position: absolute; left: -5000px;"
                 input type="text" name="b_5475e7996ac26b0534e395154_dfa6fdcece" tabindex="-1" value=""
               div class="clear"

@@ -32,6 +32,7 @@ class BlogsController < ApplicationController
     else
       @next_post = client.posts("dawenster.tumblr.com", :filter => "text", :tag => current_tag - 1)["posts"][0]
     end
+    @trust_observer = params[:trust] == 'true'
   end
 
   private
