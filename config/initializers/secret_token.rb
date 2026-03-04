@@ -9,4 +9,7 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-JustSayWen::Application.config.secret_key_base = '10344096651a7ddb0aad5a275c5df9489c3259d988d394aec9dad7b2fe06b24f906075baaf7026cf2c44c15cd993f694c77a303f3c6228031f6c7ce5f7dad709'
+JustSayWen::Application.config.secret_key_base = ENV.fetch(
+  'SECRET_KEY_BASE',
+  '10344096651a7ddb0aad5a275c5df9489c3259d988d394aec9dad7b2fe06b24f906075baaf7026cf2c44c15cd993f694c77a303f3c6228031f6c7ce5f7dad709'
+)

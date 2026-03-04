@@ -17,3 +17,7 @@ test:
   database: justsaywen_test
   pool: 5
   timeout: 5000
+
+production:
+  url: <%= ENV['DATABASE_URL'] %>
+  pool: <%= (ENV['RAILS_MAX_THREADS'] || 5).to_i %>
