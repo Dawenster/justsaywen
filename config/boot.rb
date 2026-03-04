@@ -2,3 +2,6 @@
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
 
 require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
+
+# Compatibility shims for running this legacy Rails app on modern Ruby.
+require_relative 'compat/ruby3'

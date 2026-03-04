@@ -11,11 +11,17 @@
     .right-content
       .grid-item-wrapper
         - @sets.each do |set|
-          - info = flickr.photos.getInfo(:photo_id => set["primary"])
-          .grid-item style="background-image:url(#{FlickRaw.url(info)})" data-url="#{gallery_path(set["title"], set["id"])}"
-            .dark-overlay data-url="#{gallery_path(set["title"], set["id"])}"
+          - title = set["title"].is_a?(Hash) ? set["title"]["_content"] : set["title"]
+          - flickr_url = "https://www.flickr.com/photos/33229628@N04/sets/#{set["id"]}/"
+          - extras = set["primary_photo_extras"]
+          - image_url = set["url_z"] || set["url_m"] || set["url_l"] || set["url_c"] || set["url_o"]
+          - image_url ||= extras && (extras["url_z"] || extras["url_m"] || extras["url_l"] || extras["url_c"] || extras["url_o"])
+          - if image_url.blank? && set["farm"].present? && set["server"].present? && set["primary"].present? && set["secret"].present?
+            - image_url = "https://farm#{set["farm"]}.staticflickr.com/#{set["server"]}/#{set["primary"]}_#{set["secret"]}_z.jpg"
+          .grid-item style="background-image:url(#{image_url})" data-url="#{flickr_url}"
+            .dark-overlay data-url="#{flickr_url}"
             .grid-title
-              = link_to(set["title"], gallery_path(set["title"], set["id"]), :class => "gallery-link")
+              = link_to(title, flickr_url, :class => "gallery-link")
 
 javascript:
   $(".grid-item").click(function(e) {
