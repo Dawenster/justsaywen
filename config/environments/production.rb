@@ -20,7 +20,7 @@ JustSayWen::Application.configure do
   # config.action_dispatch.rack_cache = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
-  # config.serve_static_assets = false # As per http://stackoverflow.com/questions/18828795/rails-4-asset-compiling
+  config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -77,6 +77,12 @@ JustSayWen::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  if ENV['RAILS_LOG_TO_STDOUT'].present?
+    logger           = ActiveSupport::Logger.new(STDOUT)
+    logger.formatter = config.log_formatter
+    config.logger    = ActiveSupport::TaggedLogging.new(logger)
+  end
 
   # Add the fonts path
   config.assets.paths << Rails.root.join('vendor', 'assets', 'fonts')

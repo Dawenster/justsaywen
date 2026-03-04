@@ -1,28 +1,22 @@
-== README
+== JustSayWen
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Legacy Rails 4.2 app backed by PostgreSQL.
 
-Things you may want to cover:
+== Railway deployment checklist
 
-* Ruby version
+1. Push this repository to GitHub.
+2. In Railway, create a new project and deploy from the GitHub repo.
+3. Add a PostgreSQL service in Railway and attach it to this app.
+4. Set environment variables on the app service:
+   * <tt>RAILS_ENV=production</tt>
+   * <tt>SECRET_KEY_BASE=...</tt> (generate with <tt>bundle exec rake secret</tt>)
+   * <tt>RAILS_LOG_TO_STDOUT=true</tt>
+   * <tt>RAILS_SERVE_STATIC_FILES=true</tt>
+5. Confirm the app's start command uses the Procfile web process.
+6. Run database setup after first deploy:
+   * <tt>bundle exec rake db:migrate</tt>
+7. Redeploy and verify the public URL.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Notes:
+* Railway automatically provides <tt>DATABASE_URL</tt> when PostgreSQL is attached.
+* This app's production database config reads directly from <tt>DATABASE_URL</tt>.

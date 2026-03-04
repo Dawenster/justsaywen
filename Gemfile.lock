@@ -109,7 +109,6 @@ GEM
       timeout
     net-smtp (0.5.1)
       net-protocol
-    newrelic_rpm (3.6.6.147)
     nokogiri (1.13.10)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
@@ -207,7 +206,6 @@ DEPENDENCIES
   jquery-turbolinks
   json (~> 2.6.3)
   metamagic
-  newrelic_rpm
   nokogiri (~> 1.13.10)
   pg (~> 0.21.0)
   pry
